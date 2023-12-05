@@ -1,0 +1,24 @@
+package person {
+
+}
+abstract class "abstract class"
+class
+enum 
+interface
+
+Class01 <|-- Class0
+
+class Dummy {
+String data
+void methods()
+}
+
+class Dummy {
+{field} A field (despite parentheses)
+{method} Some method
+}
+
+- private
+# protected
+~ package private
++ public

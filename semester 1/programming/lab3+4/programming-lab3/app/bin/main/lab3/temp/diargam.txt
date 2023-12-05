@@ -1,0 +1,176 @@
+@startuml
+package creature.properties {
+    interface Existence {
+        public String getName()
+        public Existence getLocation()
+        public void setLocation(Existence location)
+    }
+}
+
+package creature {
+    package properties {
+        interface CanCall {
+            + void call(Phone phone, Human human, Location location)
+        }
+
+        interface Moveable {
+            + void move(Location location)
+        }
+
+        interface UnderstandText {
+            + void read(Readable obj)
+        }
+    }
+
+    class Human {
+        - String name
+        - Existence currentLocation
+        + Human(String name)
+        + Human(String name, Existence currentLocation)
+        + String getName()
+        + Existence getLocation()
+        + void setLocation(Existence location)
+        + String read(Readable obj)
+        + void move(Existence location)
+        + void call(Phone phone, Human human, Location location)
+    }
+
+    UnderstandText <|-- Human
+    Moveable <|-- Human
+    CanCall <|-- Human
+    Existence <|-- Human
+}
+
+package locations.base {
+    abstract class Location {
+        {abstract} void add(Human obj)
+        {abstract} void remove(Human obj)
+    }
+
+    class Building {
+        - ArrayList<Human> peopleInside
+        + void add(Human human)
+        + void remove(Human human)
+    }
+
+    Location <|-- Building
+    Existence <|-- Location
+}
+
+package buisness {
+    class Company {
+        # Worker owner
+        - ArrayList<Worker> stuff
+        - ArrayList<Equipment> equipments
+        + Company(String name, Worker owner)
+        + Worker getOwner()
+        + void add(Worker worker)
+        + void remove(Worker worker)
+        + void add(Equipment equipment)
+        + void remove(Equipment equipment)
+    }
+
+    Building <|-- Company
+
+    package materials {
+        class Equipment {
+            - Human owner
+            + String name;
+            + Existence currentLocation;
+            + Equipment(Human owner)
+            + Human getOwner()
+            + Existence getLocation()
+            + void setLocation(Existence location)
+            + String getName()
+        }
+
+        Existence <|-- Equipment
+    }
+
+    package stuff {
+        enum Job {
+            Owner
+            Editor
+            Typist
+        }
+
+        class Worker {
+            - Job job;
+            - int budget;
+            + Worker(String name, Job job, int budget)
+            + Job getJob()
+            + int getBudget()
+            + void setBudget(int budget)
+            + void changeBudget(int budget)
+        }
+
+        Human <|-- Worker
+    }
+}
+
+package locations {
+    class Bank {
+        + Bank(String name, Worker owner)
+    }
+    
+    class NewspaperEditoring {
+        - int countPapers
+        + NewspaperEditoring(String name, Worker owner)
+        + void makePapers(int cost)
+        + void sellPapers(int cost)
+        + void paidSalary(Worker worker, int money)
+    }
+
+    Company <|-- Bank
+    Company <|-- NewspaperEditoring
+}
+
+package things {
+    package properties {
+        interface Readable {
+            + String getText()
+        }
+    }
+
+    class Car {
+        - String name
+        - Existence currentLocation
+        + Car(String name)
+        + Car(String name, Existence currentLocation)
+        + String getName()
+        + Existence getLocation()
+        + void setLocation(Existence location)
+        + void move(Existence location)
+    }
+
+    Existence <|-- Car
+    Moveable <|-- Car
+
+    class Phone {
+        - String name;
+        - Existence currentLocation;
+        + Phone(String name)
+        + Phone(String name, Existence currentLocation)
+        + Existence getLocation()
+        + void setLocation(Existence location)
+        + String getName()
+    }
+
+    Existence <|-- Phone
+
+    class Telegram {
+        - String name
+        - String text
+        - Existence currentLocation
+        + Telegram(String name, String text)
+        + Telegram(String name, String text, Existence currentLocation)
+        + String getText()
+        + Existence getLocation()
+        + void setLocation(Existence location)
+        + String getName()
+    }
+
+    Readable <|-- Telegram
+    Existence <|-- Telegram
+}
+@endum
