@@ -10,7 +10,6 @@ public class Phone implements Existence {
     public Functionality functionality = new Functionality() {
         private boolean isBroken = false;
 
-        @Override
         public void repair() {
             isBroken = false;
         }
