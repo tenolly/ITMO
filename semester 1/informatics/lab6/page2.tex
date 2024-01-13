@@ -1,0 +1,52 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{courier}
+
+\usepackage[english, russian]{babel}
+
+\usepackage{graphicx, geometry}
+\usepackage{multicol}
+
+\usepackage{amsmath}
+\usepackage{cases}
+
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+
+\usepackage{fancyhdr}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\thepage}
+
+\graphicspath{ {./images/} }
+
+\setcounter{page}{5}
+\newgeometry{top=2cm, bottom=2cm, left=2.2cm, right=2.2cm}
+\setlength{\columnsep}{0.8cm}
+
+\setlength{\headwidth}{17.1cm} 
+\setlength{\tabcolsep}{0.155cm}
+\begin{document}
+\vspace*{-3em}  \centerline{\texttt{ЧТО ТАКОЕ ФУНКЦИЯ?}}
+\vspace*{0.8em}
+\begin{multicols*}{2}
+\begin{center}
+\begin{tabular}{ |m{1.2cm} *{13}{|m{0.2cm}}| } 
+  \hline
+  & 1 & 2 & 3& 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & ... & 28\\ 
+  \hline
+  Петя &\cellcolor{black}&&&&\cellcolor{black}&&&&\cellcolor{black}&&&&\\ 
+  \hline
+  Коля &&\cellcolor{black}&&&&\cellcolor{black}&&&&\cellcolor{black}&&&\\ 
+  \hline
+  Саша &&&\cellcolor{black}&&&&\cellcolor{black}&&&&\cellcolor{black}&& \\ 
+  \hline
+   Володя &&&&\cellcolor{black}&&&&\cellcolor{black}&&&&&\cellcolor{black} \\ 
+  \hline
+\end{tabular}
+\end{center}
+\end{multicols*}
+\end{document}

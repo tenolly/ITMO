@@ -1,0 +1,99 @@
+day_number: 2
+week_number: 13
+date: '2023-11-21'
+note:
+type:
+lessons:
+- pair_id: 1942524601
+  subject: Математический анализ
+  subject_id: 25594
+  note:
+  type: Лекции
+  time_start: '08:20'
+  time_end: '09:50'
+  teacher_id: 138626
+  teacher_name: Правдин Константин Владимирович
+  room: Orange Classroom (1229)
+  building: Кронверкский пр., д.49, лит.А
+  format: 'Очно - дистанционный '
+  work_type: Лекции
+  work_type_id: 1
+  group: МАТ АН ПИиКТ 13
+  flow_type_id: 2
+  flow_id: 34741
+  zoom_url:
+  zoom_password:
+  zoom_info:
+  bld_id: 13
+  format_id: 2
+  main_bld_id: 13
+- pair_id: 1942525378
+  subject: Математический анализ
+  subject_id: 25594
+  note: "."
+  type: Практические занятия
+  time_start: '10:00'
+  time_end: '11:30'
+  teacher_id: 345345
+  teacher_name: Блейхер Оксана Владимировна
+  room: '2430'
+  building: Кронверкский пр., д.49, лит.А
+  format: 'Очно - дистанционный '
+  work_type: Практические занятия
+  work_type_id: 3
+  group: МАТ АН ПИиКТ 13.3
+  flow_type_id: 2
+  flow_id: 34750
+  zoom_url:
+  zoom_password:
+  zoom_info:
+  bld_id: 13
+  format_id: 2
+  main_bld_id: 13
+- pair_id: 2587027568
+  subject: Информатика
+  subject_id: 25416
+  note:
+  type: Лабораторные занятия
+  time_start: '13:30'
+  time_end: '15:00'
+  teacher_id: 187939
+  teacher_name: Авксентьева Елена Юрьевна
+  room: '2116'
+  building: Кронверкский пр., д.49, лит.А
+  format: 'Очно - дистанционный '
+  work_type: Лабораторные занятия
+  work_type_id: 2
+  group: ИНФОРМ 3.12
+  flow_type_id: 2
+  flow_id: 35188
+  zoom_url:
+  zoom_password:
+  zoom_info:
+  bld_id: 13
+  format_id: 2
+  main_bld_id: 13
+- pair_id: 2587027967
+  subject: Информатика
+  subject_id: 25416
+  note:
+  type: Лабораторные занятия
+  time_start: '15:20'
+  time_end: '16:50'
+  teacher_id: 187939
+  teacher_name: Авксентьева Елена Юрьевна
+  room: '2116'
+  building: Кронверкский пр., д.49, лит.А
+  format: 'Очно - дистанционный '
+  work_type: Лабораторные занятия
+  work_type_id: 2
+  group: ИНФОРМ 3.12
+  flow_type_id: 2
+  flow_id: 35188
+  zoom_url:
+  zoom_password:
+  zoom_info:
+  bld_id: 13
+  format_id: 2
+  main_bld_id: 13
+intersections: []
