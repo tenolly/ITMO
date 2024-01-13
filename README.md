@@ -1,1 +1,2 @@
-<image src="images/ITMO_logo.png" alt="ITMO University">
+### ITMO University
+# Кафедра вычислительной техники, направление СППО
