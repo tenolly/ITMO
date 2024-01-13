@@ -1,1 +1,1 @@
-# ITMO
+<image src="ITMO_logo.png" alt="ITMO University">
