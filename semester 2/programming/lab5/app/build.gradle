@@ -1,0 +1,41 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('junit:junit:4.13.2')
+    implementation('com.google.guava:guava:32.1.1-jre')
+    implementation('com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.15.4')
+    implementation('com.fasterxml.jackson.datatype:jackson-datatype-jsr310')
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'lab5.App'
+}
+
+jar {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+    
+    manifest {
+        attributes 'Main-Class': application.mainClass
+        }
+    
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+run {
+    standardOutput = System.out
+    standardInput = System.in
+}
