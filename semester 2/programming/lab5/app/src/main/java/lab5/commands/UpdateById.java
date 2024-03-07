@@ -19,7 +19,7 @@ public class UpdateById extends Command {
                 if (arg == null) throw new CasterException("can't be empty");
                 if (arg.equals("!exit")) throw new TerminateException();
 
-                var vehicle = context.getEnviroment().getCollectionHandler().getById(Vehicle.Caster.castToId(arg));
+                var vehicle = context.getEnviroment().getCollectionHandler().getById(Vehicle.Caster.castToId.apply(arg));
                 if (vehicle == null) throw new CasterException("item not found");
 
                 return vehicle;

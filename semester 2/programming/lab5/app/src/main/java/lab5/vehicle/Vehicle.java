@@ -28,7 +28,7 @@ public class Vehicle implements Comparable<Vehicle> {
     private FuelType fuelType;
 
     private static long currentMaxId = 0;
-    private static Map<String, Consumer<String>> mutableFields = new HashMap<>();;
+    private static Map<String, Consumer<String>> mutableFields = new HashMap<>();
 
     @JsonCreator
     public Vehicle(
@@ -186,10 +186,6 @@ public class Vehicle implements Comparable<Vehicle> {
             Vehicle.Validator.validateFuelType(fuelType);
             return fuelType;
         };
-
-        public static Long castToId(String arg) {
-            return Long.parseLong(arg);
-        }
     }
 
     public static class Validator {
