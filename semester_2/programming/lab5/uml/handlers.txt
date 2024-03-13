@@ -1,0 +1,45 @@
+@startuml
+
+package handlers {
+    class CollectionHandler {
+        - PriorityQueue<Vehicle> collection
+        - Date createdAt
+        + CollectionHandler()
+        + CollectionHandler(String filename)
+        + PriorityQueue<Vehicle> getCollection()
+        + void removeElements(Function<Vehicle, Boolean> compareFunction)
+        + void removeElements(Function<Vehicle, Boolean> compareFunction, final long count)
+        + int countElements(Function<Vehicle, Boolean> compareFunction)
+        + ArrayList<Vehicle> getElements(Function<Vehicle, Boolean> compareFunction)
+        + void add(Vehicle v)
+        + Vehicle getById(long id)
+        + Vehicle pop()
+        + int size()
+        + Date createdAt()
+        + Class<?> type()
+        + void clear()
+    }
+
+    class CommandHandler {
+        + HashMap<String, Command> commands
+        + CommandHandler add(Command command)
+        + Command getCommand(String name)
+        + Collection<Command> getAllCommands()
+    }
+    
+    class Enviroment {
+        - CollectionHandler collectionHandler
+        - CommandHandler commandHandler
+        - ArrayList<Scanner> scanners
+        - ArrayList<String> stack
+        + Enviroment(CollectionHandler collectionHandler, CommandHandler commandHandler)
+        + Enviroment commandListener()
+        + Scanner getScanner()
+        + CommandHandler getCommandHandler()
+        + CollectionHandler getCollectionHandler()
+        + Enviroment setScanner(Scanner scanner)
+        + void setTempScanner(Scanner tempScanner, String filename)
+    }
+}
+
+@enduml
