@@ -1,0 +1,69 @@
+@startuml
+
+entity planets {
+  id
+  --
+  name
+}
+
+entity humans {
+  id
+  --
+  name
+  crew_id
+}
+
+entity crews {
+  id
+  --
+}
+
+entity spaceships {
+  id
+  --
+  flight_id
+}
+
+entity flights {
+  id
+  --
+  crew_id
+  speed
+  direction
+  course_for_planet
+}
+
+crews }|--|{ humans: the part of crew
+flights }|--|| spaceships: a current flight's data
+crews }|--|| flights: control the ship
+planets }|--|{ flights: course for
+
+entity locations {
+  id
+  --
+  planet_id
+  coordinates
+}
+
+entity computers {
+  id
+  --
+  location_id
+}
+
+planets ||--|{ locations: is located
+locations ||--|{ computers: is located
+
+entity connections {
+    id
+    --
+    computer_id
+    spaceship_id
+    sent_data
+    delay
+}
+
+spaceships ||--|{ connections: transmit data
+computers ||--|{ connections: transmit data
+
+@enduml
