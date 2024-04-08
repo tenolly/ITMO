@@ -3,68 +3,81 @@ left to right direction
 hide empty methods
 
 entity planets {
-  id INTEGER PRIMARY KEY
-  --
-  name TEXT
+    id INTEGER (PK)
+	--
+    name TEXT
 }
 
-entity humans {
-  id INTEGER PRIMARY KEY
-  --
-  name TEXT NOT NULL
-  crew_id INTEGER
+entity locations {
+    id INTEGER (PK)
+	--
+    planet_id INTEGER NOT NULL (FK)
+    coordinates TEXT NOT NULL
 }
 
 entity crews {
-  id INTEGER PRIMARY KEY
-  --
+    id INTEGER (PK)
+	--
 }
 
-entity spaceships {
-  id INTEGER PRIMARY KEY
-  --
-  flight_id INTEGER 
+entity humans {
+    id INTEGER (PK)
+	--
+    name TEXT NOT NULL
+    crew_id INTEGER (FK)
 }
 
 entity flights {
-  id INTEGER PRIMARY KEY
-  --
-  crew_id INTEGER
-  speed INTEGER NOT NULL
-  direction TEXT NOT NULL
-  course_for_planet INTEGER 
+    id INTEGER (PK)
+	--
+    crew_id INTEGER (FK)
+    speed INTEGER NOT NULL
+    direction TEXT NOT NULL
+    course_for_planet INTEGER (FK)
 }
 
-crews::id }|--|{ humans::crew_id
-flights::id }|--|| spaceships::flight_id
-crews::id }|--|| flights::crew_id
-planets::id }|--|{ flights::course_for
-
-entity locations {
-  id INTEGER PRIMARY KEY
-  --
-  planet_id INTEGER NOT NULL
-  coordinates TEXT NOT NULL
+entity spaceships {
+    id INTEGER (PK)
+	--
+    flight_id INTEGER (FK)
 }
 
 entity computers {
-  id INTEGER PRIMARY KEY
-  --
-  location_id INTEGER NOT NULL
+    id INTEGER (PK)
+	--
+    location_id INTEGER NOT NULL (FK)
 }
 
-planets::id ||--|{ locations::planet_id
-locations::id ||--|{ computers::location_id
-
 entity connections {
-    id INTEGER PRIMARY KEY
-    --
-    computer_id INTEGER NOT NULL
-    spaceship_id INTEGER NOT NULL
-    sent_data TEXT 
+    id INTEGER (PK)
+	--
+    computer_id INTEGER NOT NULL (FK)
+    spaceship_id INTEGER NOT NULL (FK)
+    sent_data TEXT
     delay INTEGER NOT NULL
 }
 
+entity human_to_crew { 
+    crew_id (FK)
+	human_id (FK)
+}
+
+entity flight_to_planet {
+	planet_id (FK)
+	flight_id (FK)
+}
+
+human_to_crew::crew_id }|--|| crews::id
+human_to_crew::human_id }|--|| humans::id
+
+flights::id }|--|| spaceships::flight_id
+crews::id }|--|| flights::crew_id
+
+flight_to_planet::planet_id }|--|| planets::id
+flight_to_planet::flight_id }|--|| flights::id
+
+planets::id ||--|{ locations::planet_id
+locations::id ||--|{ computers::location_id
 spaceships::id ||--|{ connections::spaceship_id
 computers::id ||--|{ connections::computer_id
 
