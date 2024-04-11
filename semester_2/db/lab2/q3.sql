@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM (SELECT НАИМЕНОВАНИЕ FROM Н_ДИСЦИПЛИНЫ GROUP BY НАИМЕНОВАНИЕ) AS "table";
