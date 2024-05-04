@@ -1,0 +1,379 @@
+@startuml
+
+package utils {
+    package commands {
+        package types {
+            interface OnlyForServer {}
+        }
+
+        package exceptions {
+            class TerminateException {}
+        }
+
+        class Argument {
+            - name : String
+            - decription : String
+            - value : T
+            - castToType : Function<String,T>
+            + Argument(name : String, decription : String, castToType : Function<String,T>)
+            + setValue(value : String) : void
+            + getValue() : T
+            + getName() : String
+            + getDescription() : String
+        }
+
+        class Command {
+            - name : String
+            - description : String
+            - arguments : ArrayList<Argument<?>>
+            # enviroment : Enviroment
+            + Command(name : String, description : String)
+            + setEnviroment(enviroment : Enviroment) : Command
+            # initArgs(args : Argument<?>) : void
+            + getArgs() : ArrayList<Argument<?>>
+            + getName() : String
+            + getDescription() : String
+            + {abstract} execute(args : HashMap<String,?>) : ArrayList<String>
+        }
+    }
+
+    package handlers {
+        class CommandHandler{
+            - commands : HashMap<String,Command>
+            + add(command : Command) : CommandHandler
+            + getCommand(name : String) : Command
+            + getAllCommands() : Collection<Command>
+        }
+
+        class Enviroment{
+            + executeCommand(command : Command, args : HashMap<String,?>) : String
+        }
+    }
+
+    package request {
+        class CommandRequest{
+            - status : RequestStatus
+            - response : String
+            - command : String
+            - args : ArrayList<Argument<?>>
+            - argsCache : HashMap<String,Object>
+            + CommandRequest(command : String)
+            + getCommand() : String
+            + setStatus(status : RequestStatus) : void
+            + getStatus() : RequestStatus
+            + setResponse(response : String) : void
+            + getResponse() : String
+            + getArgs() : ArrayList<Argument<?>>
+            + addArg(argument : Argument<?>) : void
+            + addArgs(arguments : ArrayList<Argument<?>>) : void
+            + getArgsCache() : HashMap<String,Object>
+            + setArgsCache(cache : HashMap<String,Object>) : void
+        }
+
+        enum RequestStatus{
+            FULLFILED
+            PENDING
+            REJECTED
+        }
+    }
+
+    package vehicle {
+        package components {
+            class Coordinates {
+                - double x
+                - float y
+                + Coordinates(double x, float y)
+                + double getX()
+                + float getY()
+                + void setX(double x)
+                + void setY(float y)
+            }
+
+            class Caster {
+                + static final Function<String, Double> castToX
+                + static final Function<String, Float> castToY
+            }
+                
+            class Validator {
+                + static String xHumanIntelligibleConditions
+                + static void validateX(Double x)
+                + static String yHumanIntelligibleConditions
+                + static void validateY(Float y)
+            }
+
+            Coordinates +-- Caster
+            Coordinates +-- Validator
+
+            enum FuelType {
+                KEROSENE
+                NUCLEAR
+                ANTIMATTER
+            }
+        }
+
+        class CasterException {
+            + CasterException(String string)
+        }
+
+        class Vehicle {
+            - long id
+            - String name
+            - Coordinates coordinates
+            - java.time.ZonedDateTime creationDate
+            - Float enginePower
+            - Integer numberOfWheels
+            - float fuelConsumption
+            - FuelType fuelType
+
+            - static long currentMaxId
+            - static Map<String, Consumer<String>> mutableFields
+
+            + Vehicle(String name, Coordinates coordinates, Float enginePower, Integer numberOfWheels, float fuelConsumption, FuelType fuelType)
+            + static Set<String> getMutableFields()
+            + void setFieldByName(String name, String value)
+            + long getId()
+            + String getName()
+            + Coordinates getCoordinates()
+            + java.time.ZonedDateTime getCreationDate()
+            + Float getEnginePower()
+            + Integer getNumberOfWheels()
+            + float getFuelConsumption()
+            + FuelType getFuelType()
+            + void setName(String name)
+            + void setCoordinates(Coordinates coordinates)
+            + void setEnginePower(Float enginePower)
+            + void setNumberOfWheels(Integer numberOfWheels)
+            + void setFuelConsumption(float fuelConsumption)
+            + void setFuelType(FuelType fuelType)
+            + static void setCurrentMaxId(long currentMaxId)
+            + String toString()
+            + int compareTo(Vehicle v)
+        }
+
+        class Caster {
+            + static final Function<String, Long> castToId
+            + static final Function<String, String> castToName
+            + static final Function<String, Float> castToEnginePower
+            + static final Function<String, Integer> castToNumberOfWheels
+            + static final Function<String, Float> castToFuelConsumption
+            + static final Function<String, FuelType> castToFuelType
+        }
+
+        class Validator {
+            + static String nameHumanIntelligibleConditions
+            + static void validateName(String name)
+            + static void validateCoordinates(Coordinates coordinates)
+            + static String enginePowerHumanIntelligibleConditions
+            + static void validateEnginePower(Float enginePower)
+            + static String numberOfWheelsHumanIntelligibleConditions
+            + static void validateNumberOfWheels(Integer numberOfWheels)
+            + static String fuelConsumptionHumanIntelligibleConditions
+            + static void validateFuelConsumption(float fuelConsumption)
+            + static ArrayList<String> fuelTypeValues
+            + static String fuelTypeHumanIntelligibleConditions
+            + static void validateFuelType(FuelType fuelType)
+        }
+
+        Vehicle +-- Caster
+        Vehicle +-- Validator
+    }
+}
+
+package client {
+    package commands {
+        class ExecuteScript {
+            + ExecuteScript(name : String, description : String)
+            + execute(args : HashMap<String,?>) : ArrayList<String>
+        }
+
+        class Exit {
+            + Exit(name : String, description : String)
+            + execute(args : HashMap<String,?>) : ArrayList<String>
+        }
+
+        class Help {
+            + Help(name : String, description : String)
+            + execute(args : HashMap<String,?>) : ArrayList<String>
+        }
+
+        utils.commands.Command <|-up--- ExecuteScript
+        utils.commands.Command <|-up--- Exit
+        utils.commands.Command <|-up--- Help
+    }
+
+    package managers {
+        class ClientEnviroment {
+            - commandHandler : CommandHandler
+            - scanners : ArrayList<Scanner>
+            + ClientEnviroment(commandHandler : CommandHandler)
+            + getCommandHandler() : CommandHandler
+            + getListOfLines(filename : String, linesAlreadyRead : ArrayList<String>, filesAlreadyRead : ArrayList<String>, recursionEntryPoint : Predicate<String>) : ArrayList<String>
+            + addScanner(scanner : Scanner) : void
+            + getScanner() : Scanner
+            + getScannersStackSize() : int
+            + popScanner() : void
+        }
+
+        class DataManager {
+            - clientChannel : SocketChannel
+            - host : String
+            - port : int
+            + DataManager(host : String, port : int)
+            + sendRequest(request : CommandRequest) : CommandRequest
+            + is_available() : boolean
+            + connect() : void
+            + reconnect() : void
+            + close() : void
+        }
+
+        utils.handlers.Enviroment <|-up--- ClientEnviroment
+    }
+
+    class Client {
+        - dataManager : DataManager
+        - enviroment : ClientEnviroment
+        - logFile : String
+        - errorStream : PrintStream
+        + Client(host : String, port : int, logFile : String)
+        + start() : void
+        + processRequest(request : CommandRequest) : void
+        + processResponce(response : CommandRequest) : void
+        + readArgs(response : CommandRequest) : CommandRequest
+    }
+
+    class ClientApp {
+        + {static} main(args : String[]) : void
+    }
+}
+
+package server {
+    package commands {
+        class Add {
+            + Add(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Clear {
+            + Clear(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class CountLessThanEnginePower {
+            + CountLessThanEnginePower(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class ExecuteScript {
+            + ExecuteScript(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Exit {
+            + Exit(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class FilterGreaterThanFuelConsumption {
+            + FilterGreaterThanFuelConsumption(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class FilterStartsWithName {
+            + FilterStartsWithName(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Help {
+            + Help(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Info {
+            + Info(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class RemoveById {
+            + RemoveById(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class RemoveFirst {
+            + RemoveFirst(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class RemoveHead {
+            + RemoveHead(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class RemoveLower {
+            + RemoveLower(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Save {
+            + Save(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Show {
+            + Show(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class UpdateById {
+            + UpdateById(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        utils.commands.Command <|-down--- Add
+        utils.commands.Command <|-down--- Clear
+        utils.commands.Command <|-down--- CountLessThanEnginePower
+        utils.commands.Command <|-down--- FilterGreaterThanFuelConsumption
+        utils.commands.Command <|-down--- FilterStartsWithName
+        utils.commands.Command <|-down--- Help
+        utils.commands.Command <|-down--- Info
+        utils.commands.Command <|-up--- RemoveById
+        utils.commands.Command <|-up--- RemoveFirst
+        utils.commands.Command <|-up--- RemoveHead
+        utils.commands.Command <|-up--- RemoveLower
+        utils.commands.Command <|-up--- Show
+        utils.commands.Command <|-up--- UpdateById
+    }
+
+    package handlers {
+        class CollectionHandler{
+            - collection : PriorityQueue<Vehicle>
+            - createdAt : Date
+            + CollectionHandler()
+            + CollectionHandler(filename : String)
+            + getCollection() : PriorityQueue<Vehicle>
+            + removeElements(compareFunction : Function<Vehicle,Boolean>) : void
+            + removeElements(compareFunction : Function<Vehicle,Boolean>, count : long) : void
+            + countElements(compareFunction : Function<Vehicle,Boolean>) : int
+            + getElements(compareFunction : Function<Vehicle,Boolean>) : ArrayList<Vehicle>
+            + add(v : Vehicle) : void
+            + getById(id : long) : Vehicle
+            + pop() : Vehicle
+            + size() : int
+            + createdAt() : Date
+            + type() : Class<?>
+            + clear() : void
+        }
+
+        class ServerEnviroment{
+            - collectionHandler : CollectionHandler
+            - commandHandler : CommandHandler
+            + ServerEnviroment(collectionHandler : CollectionHandler, commandHandler : CommandHandler)
+            + getCommandHandler() : CommandHandler
+            + getCollectionHandler() : CollectionHandler
+        }
+
+        utils.handlers.Enviroment <|-up--- ServerEnviroment
+    }
+
+}
+
+@enduml
