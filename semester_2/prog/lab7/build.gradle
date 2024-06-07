@@ -1,0 +1,93 @@
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: "application"
+}
+
+project(":utils") {
+    sourceSets {
+        main {
+            java {
+                srcDir "../src"
+                include "utils/**"
+            }
+        }
+    }
+
+    dependencies {
+        implementation("com.google.guava:guava:32.1.1-jre")
+        implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.15.4")
+        implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+        implementation("org.hibernate.orm:hibernate-core:6.5.1.Final")
+        implementation("commons-codec:commons-codec:1.5")
+    }
+}
+
+project(":server") {
+    application {
+        mainClass.set("server.Server")
+    }
+    
+    run {
+        standardOutput = System.out
+        standardInput = System.in
+    }
+
+    processResources {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+    
+    sourceSets {
+        main {
+            java {
+                srcDir "../src"
+                include "server/**"
+            }
+
+            resources {
+                srcDirs "src/main/resources"
+            }
+        }
+    }
+
+    dependencies {
+        implementation("com.google.guava:guava:32.1.1-jre")
+        implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.15.4")
+        implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+        implementation("org.hibernate.orm:hibernate-core:6.5.1.Final")
+        implementation("org.postgresql:postgresql:42.7.3")
+        implementation("org.apache.commons:commons-lang3:3.0")
+        implementation project(":utils")
+    }
+}
+
+project(":client") {
+    application {
+        mainClass.set("client.Client")
+    }
+
+    run {
+        standardOutput = System.out
+        standardInput = System.in
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDir "../src"
+                include "client/**"
+            }
+        }
+    }
+
+    dependencies {
+        implementation("com.google.guava:guava:32.1.1-jre")
+        implementation("org.apache.commons:commons-lang3:3.0")
+        implementation project(":utils")
+    }
+}

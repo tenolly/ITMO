@@ -1,0 +1,165 @@
+@startuml
+
+package utils {
+    package commands {
+        class Command {
+            - name : String
+            - description : String
+            - arguments : ArrayList<Argument<?>>
+            # enviroment : Enviroment
+            + Command(name : String, description : String)
+            + setEnviroment(enviroment : Enviroment) : Command
+            # initArgs(args : Argument<?>) : void
+            + getArgs() : ArrayList<Argument<?>>
+            + getName() : String
+            + getDescription() : String
+            + {abstract} execute(args : HashMap<String,?>) : ArrayList<String>
+        }
+    }
+
+    package handlers {
+        class Enviroment {
+            + executeCommand(command : Command, args : HashMap<String,?>) : String
+        }
+    }
+}
+
+package server {
+    package commands {
+        class Add {
+            + Add(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Clear {
+            + Clear(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class CountLessThanEnginePower {
+            + CountLessThanEnginePower(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class ExecuteScript {
+            + ExecuteScript(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Exit {
+            + Exit(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class FilterGreaterThanFuelConsumption {
+            + FilterGreaterThanFuelConsumption(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class FilterStartsWithName {
+            + FilterStartsWithName(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Help {
+            + Help(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Info {
+            + Info(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class RemoveById {
+            + RemoveById(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class RemoveFirst {
+            + RemoveFirst(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class RemoveHead {
+            + RemoveHead(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class RemoveLower {
+            + RemoveLower(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Save {
+            + Save(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class Show {
+            + Show(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        class UpdateById {
+            + UpdateById(String name, String description)
+            + ArrayList<String> execute()
+        }
+
+        utils.commands.Command <|-down--- Add
+        utils.commands.Command <|-down--- Clear
+        utils.commands.Command <|-down--- CountLessThanEnginePower
+        utils.commands.Command <|-down--- FilterGreaterThanFuelConsumption
+        utils.commands.Command <|-down--- FilterStartsWithName
+        utils.commands.Command <|-down--- Help
+        utils.commands.Command <|-down--- Info
+        utils.commands.Command <|-up--- RemoveById
+        utils.commands.Command <|-up--- RemoveFirst
+        utils.commands.Command <|-up--- RemoveHead
+        utils.commands.Command <|-up--- RemoveLower
+        utils.commands.Command <|-up--- Show
+        utils.commands.Command <|-up--- UpdateById
+    }
+
+    package managers {
+        class HibernateUtil {
+            - final static Logger LOGGER
+            - static SessionFactory sessionFactory
+            - static SessionFactory buildSessionFactory()
+
+            + static SessionFactory getSessionFactory()
+            + static void shutdown()
+        }
+
+        class DatabaseManager {
+            - collection : PriorityQueue<Vehicle>
+            - createdAt : Date
+            + DatabaseManager()
+            + getCollection() : PriorityQueue<Vehicle>
+            + removeElements(compareFunction : Function<Vehicle,Boolean>) : void
+            + removeElements(compareFunction : Function<Vehicle,Boolean>, count : long) : void
+            + countElements(compareFunction : Function<Vehicle,Boolean>) : int
+            + getElements(compareFunction : Function<Vehicle,Boolean>) : ArrayList<Vehicle>
+            + add(v : Vehicle) : void
+            + getById(id : long) : Vehicle
+            + pop() : Vehicle
+            + size() : int
+            + createdAt() : Date
+            + type() : Class<?>
+            + clear() : void
+        }
+
+        class ServerEnviroment {
+            - collectionHandler : CollectionHandler
+            - commandHandler : CommandHandler
+            + ServerEnviroment(collectionHandler : CollectionHandler, commandHandler : CommandHandler)
+            + getCommandHandler() : CommandHandler
+            + getCollectionHandler() : CollectionHandler
+        }
+
+        utils.handlers.Enviroment <|-up--- ServerEnviroment
+    }
+
+}
+
+@enduml

@@ -1,0 +1,94 @@
+@startuml
+
+package utils {
+    package commands {
+        class Command {
+            - name : String
+            - description : String
+            - arguments : ArrayList<Argument<?>>
+            # enviroment : Enviroment
+            + Command(name : String, description : String)
+            + setEnviroment(enviroment : Enviroment) : Command
+            # initArgs(args : Argument<?>) : void
+            + getArgs() : ArrayList<Argument<?>>
+            + getName() : String
+            + getDescription() : String
+            + {abstract} execute(args : HashMap<String,?>) : ArrayList<String>
+        }
+    }
+
+    package handlers {
+        class Enviroment {
+            + executeCommand(command : Command, args : HashMap<String,?>) : String
+        }
+    }
+}
+
+package client {
+    package commands {
+        class ExecuteScript {
+            + ExecuteScript(name : String, description : String)
+            + execute(args : HashMap<String,?>) : ArrayList<String>
+        }
+
+        class Exit {
+            + Exit(name : String, description : String)
+            + execute(args : HashMap<String,?>) : ArrayList<String>
+        }
+
+        class Help {
+            + Help(name : String, description : String)
+            + execute(args : HashMap<String,?>) : ArrayList<String>
+        }
+
+        utils.commands.Command <|-up--- ExecuteScript
+        utils.commands.Command <|-up--- Exit
+        utils.commands.Command <|-up--- Help
+    }
+
+    package managers {
+        class ClientEnviroment {
+            - commandHandler : CommandHandler
+            - scanners : ArrayList<Scanner>
+            + ClientEnviroment(commandHandler : CommandHandler)
+            + getCommandHandler() : CommandHandler
+            + getListOfLines(filename : String, linesAlreadyRead : ArrayList<String>, filesAlreadyRead : ArrayList<String>, recursionEntryPoint : Predicate<String>) : ArrayList<String>
+            + addScanner(scanner : Scanner) : void
+            + getScanner() : Scanner
+            + getScannersStackSize() : int
+            + popScanner() : void
+        }
+
+        class DataManager {
+            - clientChannel : SocketChannel
+            - host : String
+            - port : int
+            + DataManager(host : String, port : int)
+            + sendRequest(request : CommandRequest) : CommandRequest
+            + is_available() : boolean
+            + connect() : void
+            + reconnect() : void
+            + close() : void
+        }
+
+        utils.handlers.Enviroment <|-up--- ClientEnviroment
+    }
+
+    class Client {
+        - dataManager : DataManager
+        - enviroment : ClientEnviroment
+        - logFile : String
+        - errorStream : PrintStream
+        + Client(host : String, port : int, logFile : String)
+        + start() : void
+        + processRequest(request : CommandRequest) : void
+        + processResponce(response : CommandRequest) : void
+        + readArgs(response : CommandRequest) : CommandRequest
+    }
+
+    class ClientApp {
+        + {static} main(args : String[]) : void
+    }
+}
+
+@enduml
