@@ -1,0 +1,3 @@
+clear
+add 1 1 1 1 1 1 NUCLEAR
+add 2 10 15 1 1 1 ANTIMATTER

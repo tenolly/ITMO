@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.FXCollections ?>
+
+<Pane prefHeight="619.0" prefWidth="1227.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ui.controllers.FXMLMainWindowController">
+   <children>
+      <Pane fx:id="visual" layoutX="738.0" layoutY="12.0" prefHeight="592.0" prefWidth="475.0" style="-fx-border-color: black; -fx-background-color: white;" />
+      <Pane layoutX="13.0" layoutY="459.0" prefHeight="146.0" prefWidth="259.0" style="-fx-border-color: black; -fx-background-color: white;">
+         <children>
+            <ComboBox fx:id="langComboBox" layoutX="136.0" prefHeight="33.0" prefWidth="123.0" promptText="Русский" style="-fx-border-color: black; -fx-background-color: white; -fx-font-family: &quot;Consolas&quot;; -fx-font-size: 13px;">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:id="ru" fx:value="Русский" />
+                     <String fx:id="fr" fx:value="Français" />
+                     <String fx:id="sp" fx:value="Español" />
+                     <String fx:id="no" fx:value="Norsk" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <Label fx:id="usernameLine" alignment="CENTER" layoutX="7.0" layoutY="6.0" prefHeight="21.0" prefWidth="123.0">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font></Label>
+            <Button fx:id="logOutButton" layoutX="30.0" layoutY="88.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Выйти из аккаунта">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="showHideNameButton" layoutX="30.0" layoutY="56.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Скрыть имя">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <TextArea fx:id="consoleTextArea" editable="false" layoutX="287.0" layoutY="459.0" prefHeight="107.0" prefWidth="440.0" promptText="&gt;&gt;&gt;" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white; -fx-border-width: 1px;">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font>
+      </TextArea>
+      <Pane layoutX="14.0" layoutY="12.0" prefHeight="347.0" prefWidth="713.0" style="-fx-border-color: black; -fx-background-color: white;">
+         <children>
+            <TableView fx:id="table" prefHeight="347.0" prefWidth="713.0" style="-fx-background-color: white; -fx-border-color: black; -fx-font-family: &quot;Consolas&quot;;" stylesheets="@css/main.css">
+              <columns>
+                <TableColumn fx:id="columnId" minWidth="5.0" prefWidth="53.0" text="id">
+                     <styleClass>
+                        <String fx:value="table-cell" />
+                        <String fx:value="table-column" />
+                     </styleClass></TableColumn>
+                  <TableColumn fx:id="columnCreatedBy" minWidth="5.0" prefWidth="59.0" styleClass="table-cell" text="createdBy" />
+                <TableColumn fx:id="columnName" minWidth="0.0" prefWidth="0.0" styleClass="table-cell" text="name" />
+                  <TableColumn fx:id="columnX" prefWidth="40.0" styleClass="table-cell" text="x" />
+                  <TableColumn fx:id="columnY" minWidth="2.0" prefWidth="39.0" styleClass="table-cell" text="y" />
+                  <TableColumn fx:id="columnCreationDate" prefWidth="104.0" styleClass="table-cell" text="creationDate" />
+                  <TableColumn fx:id="columnEnginePower" prefWidth="104.0" styleClass="table-cell" text="enginePower" />
+                  <TableColumn fx:id="columnNumberOfWheels" prefWidth="112.0" styleClass="table-cell" text="numberOfWheels" />
+                  <TableColumn fx:id="columnFuelConsumption" prefWidth="111.0" styleClass="table-cell" text="fuelConsumption" />
+                  <TableColumn fx:id="columnFuelType" prefWidth="89.0" styleClass="table-cell" text="fuelType" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <HBox layoutX="14.0" layoutY="372.0" prefHeight="33.0" prefWidth="713.0" spacing="10.0">
+         <children>
+            <Button fx:id="addCommand" mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="add">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="removeCommand" mnemonicParsing="false" prefHeight="31.0" prefWidth="161.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="remove by id">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="removeFirstCommand" mnemonicParsing="false" prefHeight="31.0" prefWidth="142.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="remove first">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="removeHeadCommand" mnemonicParsing="false" prefHeight="31.0" prefWidth="133.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="remove head">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="removeLowerCommand" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="remove lower">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="412.0" prefHeight="31.0" prefWidth="713.0" spacing="10.0">
+         <children>
+            <Button fx:id="showCommand" mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="show">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="filterStartsWithNameCommand" mnemonicParsing="false" prefHeight="31.0" prefWidth="162.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="filter startswith">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="filterGreaterFuelConsumptionCommand" mnemonicParsing="false" prefHeight="31.0" prefWidth="141.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="filter (&gt; FC)">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="countLessThanEnginePowerCommand" mnemonicParsing="false" prefHeight="31.0" prefWidth="133.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="count (&lt; EP)">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="clearCommand" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="clear">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="helpCommand" layoutX="287.0" layoutY="573.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="133.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="HELP">
+         <font>
+            <Font name="Consolas" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="infoCommand" layoutX="431.0" layoutY="573.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="125.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="INFO">
+         <font>
+            <Font name="Consolas" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="executeScriptCommand" layoutX="565.0" layoutY="573.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="162.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-background-color: white;" text="EXECUTE SCRIPT">
+         <font>
+            <Font name="Consolas" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>

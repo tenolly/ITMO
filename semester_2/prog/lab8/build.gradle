@@ -1,0 +1,104 @@
+plugins {
+    id "org.openjfx.javafxplugin" version "0.0.13"
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: "application"
+}
+
+project(":shared") {
+    sourceSets {
+        main {
+            java {
+                srcDir "../src"
+                include "shared/**"
+            }
+        }
+    }
+
+    dependencies {
+        implementation("com.google.guava:guava:32.1.1-jre")
+        implementation("org.hibernate.orm:hibernate-core:6.5.1.Final")
+        implementation("commons-codec:commons-codec:1.5")
+    }
+}
+
+project(":server") {
+    application {
+        mainClass.set("server.Server")
+    }
+    
+    run {
+        standardOutput = System.out
+        standardInput = System.in
+    }
+
+    processResources {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+    
+    sourceSets {
+        main {
+            java {
+                srcDir "../src"
+                include "server/**"
+            }
+
+            resources {
+                srcDirs "src/main/resources"
+            }
+        }
+    }
+
+    dependencies {
+        implementation("com.google.guava:guava:32.1.1-jre")
+        implementation("org.hibernate.orm:hibernate-core:6.5.1.Final")
+        implementation("org.postgresql:postgresql:42.7.3")
+        implementation("org.apache.commons:commons-lang3:3.0")
+        implementation project(":shared")
+    }
+}
+
+project(":client") {
+    apply plugin: "org.openjfx.javafxplugin"
+
+    application {
+        mainClass.set("client.ClientApp")
+    }
+
+    run {
+        standardOutput = System.out
+        standardInput = System.in
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDir "../src"
+                include "client/**"
+            }
+        }
+    }
+
+    dependencies {
+        implementation("com.google.guava:guava:32.1.1-jre")
+        implementation("org.apache.commons:commons-lang3:3.0")
+        implementation("commons-codec:commons-codec:1.5")
+        implementation("org.openjfx:javafx-base:17.0.11")
+        implementation("org.openjfx:javafx-controls:17.0.11")
+        implementation("org.openjfx:javafx-fxml:17.0.11")
+        implementation project(":shared")
+    }
+
+    javafx {
+        version = "17.0.11"
+        modules = [ "javafx.base", "javafx.controls", "javafx.fxml" ]
+    }
+}

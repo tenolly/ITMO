@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="986.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ui.controllers.FXMLAddDialogController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="79.0" prefWidth="958.0" style="-fx-border-color: black; -fx-background-color: white;">
+         <children>
+            <VBox layoutX="14.0" layoutY="9.0" prefHeight="56.0" prefWidth="934.0">
+               <children>
+                  <HBox prefHeight="23.0" prefWidth="200.0" spacing="2.0">
+                     <children>
+                        <Label fx:id="nameLabel" alignment="CENTER" prefHeight="21.0" prefWidth="82.0" text="name">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="21.0" prefWidth="135.0" text="x" fx:id="xLabel">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="yLabel" alignment="CENTER" prefHeight="21.0" prefWidth="124.0" text="y">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enginePowerLabel" alignment="CENTER" prefHeight="21.0" prefWidth="129.0" text="engine power">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="numberOfWheelsLabel" alignment="CENTER" prefHeight="21.0" prefWidth="169.0" text="number of wheels">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fuelConsumptionLabel" alignment="CENTER" prefHeight="21.0" prefWidth="150.0" text="fuel consumption">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fuelTypeLabel" alignment="CENTER" prefHeight="21.0" prefWidth="134.0" text="fuel type">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="857.0" spacing="2.0">
+                     <children>
+                        <TextField fx:id="nameLine" alignment="CENTER" prefHeight="31.0" prefWidth="82.0" style="-fx-border-color: black; -fx-background-color: -fx-text-box-border, -fx-control-inner-background;">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField alignment="CENTER" prefHeight="31.0" prefWidth="134.0" promptText="float, &gt; -809" style="-fx-border-color: black; -fx-background-color: -fx-text-box-border, -fx-control-inner-background;" fx:id="xLine">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="yLine" alignment="CENTER" prefHeight="31.0" prefWidth="126.0" promptText="float, &gt; -429" style="-fx-border-color: black; -fx-background-color: -fx-text-box-border, -fx-control-inner-background;">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="enginePowerLine" alignment="CENTER" prefHeight="31.0" prefWidth="128.0" promptText="float, &gt; 0" style="-fx-border-color: black; -fx-background-color: -fx-text-box-border, -fx-control-inner-background;">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="numberOfWheelsLine" alignment="CENTER" prefHeight="31.0" prefWidth="170.0" promptText="integer, &gt; 0 | skip" style="-fx-border-color: black; -fx-background-color: -fx-text-box-border, -fx-control-inner-background;">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="fuelConsumptionLine" alignment="CENTER" prefHeight="31.0" prefWidth="149.0" promptText="float, &gt; 0" style="-fx-border-color: black; -fx-background-color: -fx-text-box-border, -fx-control-inner-background;">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="fuelTypeComboBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: white; -fx-border-color: black; -fx-font-family: &quot;Consolas&quot;; -fx-font-size: 14px;">
+                        <items>
+                           <FXCollections fx:factory="observableArrayList">
+                              <String fx:id="kerosene" fx:value="KEROSENE" />
+                              <String fx:id="nuclear" fx:value="NUCLEAR" />
+                              <String fx:id="antimatter" fx:value="ANTIMATTER" />
+                           </FXCollections>
+                        </items>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <HBox alignment="TOP_RIGHT" layoutX="802.0" layoutY="101.0" prefHeight="33.0" prefWidth="170.0" spacing="8.0">
+         <children>
+            <Button fx:id="okButton" alignment="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="54.0" style="-fx-background-color: white; -fx-border-color: black;" text="OK">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="cancelButton" alignment="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="87.0" style="-fx-background-color: white; -fx-border-color: black;" text="Cancel">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <ComboBox fx:id="langComboBox" layoutX="14.0" layoutY="101.0" prefHeight="33.0" prefWidth="123.0" promptText="Русский" style="-fx-border-color: black; -fx-background-color: white; -fx-font-family: &quot;Consolas&quot;; -fx-font-size: 13px;">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:id="ru" fx:value="Русский" />
+               <String fx:id="fr" fx:value="Français" />
+               <String fx:id="sp" fx:value="Español" />
+               <String fx:id="no" fx:value="Norsk" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label fx:id="errorLabel" layoutX="153.0" layoutY="106.0" prefHeight="23.0" prefWidth="649.0" textFill="#d70d0d">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

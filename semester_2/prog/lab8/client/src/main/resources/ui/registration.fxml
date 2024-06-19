@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.FXCollections ?>
+
+<VBox prefHeight="619.0" prefWidth="998.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ui.controllers.FXMLRegistrationController">
+   <children>
+      <GridPane prefHeight="793.0" prefWidth="1165.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="315.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="766.0" minWidth="10.0" prefWidth="389.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="366.0" minWidth="10.0" prefWidth="295.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="258.0" minHeight="10.0" prefHeight="119.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="616.0" minHeight="10.0" prefHeight="336.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="350.0" minHeight="10.0" prefHeight="166.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="331.0" prefWidth="412.0" style="-fx-border-radius: 10px; -fx-border-color: black; -fx-border-width: 1px; -fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="errorLabel" alignment="CENTER" layoutX="-1.0" layoutY="293.0" prefHeight="39.0" prefWidth="389.0" textFill="#d01a1a">
+                     <font>
+                        <Font name="Consolas" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="registrationLabel" alignment="CENTER" prefHeight="79.0" prefWidth="383.0" text="Регистрация" textAlignment="CENTER">
+                     <font>
+                        <Font name="Consolas" size="26.0" />
+                     </font>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </Label>
+                  <VBox layoutX="35.0" layoutY="90.0" prefHeight="203.0" prefWidth="317.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="loginLine" focusTraversable="false" prefHeight="36.0" prefWidth="329.0" promptText="Введите логин" style="-fx-border-color: black; -fx-background-color: -fx-text-box-border, -fx-control-inner-background;">
+                           <font>
+                              <Font name="Consolas" size="15.0" />
+                           </font></TextField>
+                        <PasswordField fx:id="passwordLine" focusTraversable="false" prefHeight="37.0" prefWidth="329.0" promptText="Введите пароль" style="-fx-border-color: black; -fx-background-color: -fx-text-box-border, -fx-control-inner-background;;">
+                           <font>
+                              <Font name="Consolas" size="15.0" />
+                           </font></PasswordField>
+                        <PasswordField fx:id="passwordLine2" focusTraversable="false" layoutX="10.0" layoutY="41.0" prefHeight="37.0" prefWidth="329.0" promptText="Введите пароль еще раз" style="-fx-border-color: black; -fx-background-color: -fx-text-box-border, -fx-control-inner-background;;">
+                           <font>
+                              <Font name="Consolas" size="15.0" />
+                           </font></PasswordField>
+                        <HBox prefHeight="25.0" prefWidth="317.0">
+                           <children>
+                              <Button fx:id="registrationButton" minHeight="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="197.0" style="-fx-border-color: black; -fx-background-color: white;" text="Зарегестрировать">
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Consolas" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="haveAccountButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="197.0" style="-fx-border-color: black; -fx-background-color: white;" text="Войти">
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Consolas" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <ComboBox fx:id="langComboBox" layoutX="112.0" layoutY="100.0" prefWidth="150.0" promptText="Русский" style="-fx-background-color: white; -fx-font-size: 10pt; -fx-border-color: black; -fx-font-family: &quot;Consolas&quot;;">
+                  <items>
+                     <FXCollections fx:factory="observableArrayList">
+                        <String fx:id="ru" fx:value="Русский" />
+                        <String fx:id="fr" fx:value="Français" />
+                        <String fx:id="sp" fx:value="Español" />
+                        <String fx:id="no" fx:value="Norsk" />
+                     </FXCollections>
+                  </items>
+                  </ComboBox>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

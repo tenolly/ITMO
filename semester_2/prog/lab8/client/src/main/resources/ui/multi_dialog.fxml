@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="142.0" prefWidth="327.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ui.controllers.FXMLMultiDialogController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="49.0" prefWidth="300.0" style="-fx-border-color: black; -fx-background-color: white;">
+         <children>
+            <TextField fx:id="valueLine" alignment="CENTER" layoutX="11.0" layoutY="10.0" prefHeight="29.0" prefWidth="279.0" style="-fx-border-color: black; -fx-background-color: -fx-text-box-border, -fx-control-inner-background;">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <HBox alignment="TOP_RIGHT" layoutX="164.0" layoutY="73.0" prefHeight="33.0" prefWidth="150.0" spacing="8.0">
+         <children>
+            <Button fx:id="okButton" alignment="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="54.0" style="-fx-background-color: white; -fx-border-color: black;" text="OK">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" alignment="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="87.0" style="-fx-background-color: white; -fx-border-color: black;" text="Cancel">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <ComboBox fx:id="langComboBox" layoutX="14.0" layoutY="73.0" prefHeight="33.0" prefWidth="139.0" promptText="Русский" style="-fx-border-color: black; -fx-background-color: white; -fx-font-family: &quot;Consolas&quot;; -fx-font-size: 13px;">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:id="ru" fx:value="Русский" />
+               <String fx:id="fr" fx:value="Français" />
+               <String fx:id="sp" fx:value="Español" />
+               <String fx:id="no" fx:value="Norsk" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="14.0" layoutY="112.0" prefHeight="20.0" prefWidth="300.0" textFill="#d70d0d">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

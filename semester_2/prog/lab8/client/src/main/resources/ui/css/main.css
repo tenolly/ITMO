@@ -1,0 +1,11 @@
+.table-cell {
+    font-size: 12px;
+    font-family: "Consolas";
+    
+    -fx-font-size: 12px;
+    -fx-font-family: "Consolas";
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+}
