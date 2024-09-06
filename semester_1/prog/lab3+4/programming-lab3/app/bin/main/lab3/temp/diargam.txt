@@ -1,7 +1,6 @@
 @startuml
 package creature.properties {
     interface Existence {
-        public String getName()
         public Existence getLocation()
         public void setLocation(Existence location)
     }
@@ -20,6 +19,10 @@ package creature {
         interface UnderstandText {
             + void read(Readable obj)
         }
+
+        interface Conscious {
+            + void mind(String thought)
+        }
     }
 
     class Human {
@@ -27,15 +30,19 @@ package creature {
         - Existence currentLocation
         + Human(String name)
         + Human(String name, Existence currentLocation)
-        + String getName()
         + Existence getLocation()
         + void setLocation(Existence location)
         + String read(Readable obj)
+        + void mind(String thought)
         + void move(Existence location)
         + void call(Phone phone, Human human, Location location)
+        + String toString()
+        + int hashCode()
+        + boolean equals(Object obj)
     }
 
     UnderstandText <|-- Human
+    Conscious <|-- Human
     Moveable <|-- Human
     CanCall <|-- Human
     Existence <|-- Human
@@ -51,6 +58,9 @@ package locations.base {
         - ArrayList<Human> peopleInside
         + void add(Human human)
         + void remove(Human human)
+        + String toString()
+        + int hashCode()
+        + boolean equals(Object obj)
     }
 
     Location <|-- Building
@@ -72,6 +82,13 @@ package buisness {
 
     Building <|-- Company
 
+    package problems {
+        class notEnoughMoneyException {
+            + notEnoughMoneyException()
+            + notEnoughMoneyException(String message)
+        }
+    }
+
     package materials {
         class Equipment {
             - Human owner
@@ -81,7 +98,9 @@ package buisness {
             + Human getOwner()
             + Existence getLocation()
             + void setLocation(Existence location)
-            + String getName()
+            + String toString()
+            + int hashCode()
+            + boolean equals(Object obj)
         }
 
         Existence <|-- Equipment
@@ -119,7 +138,20 @@ package locations {
         + void makePapers(int cost)
         + void sellPapers(int cost)
         + void paidSalary(Worker worker, int money)
+        + String getProfit()
     }
+
+    class FinanceMenagment {
+        - int spent
+        - int earned
+        + FinanceMenagment()
+        + FinanceMenagment(int spent, int earned)
+        + void spendMoney(int money)
+        + void earnMoney(int money)
+        + String getProfit()
+    }
+    
+    NewspaperEditoring -> FinanceMenagment
 
     Company <|-- Bank
     Company <|-- NewspaperEditoring
@@ -137,10 +169,12 @@ package things {
         - Existence currentLocation
         + Car(String name)
         + Car(String name, Existence currentLocation)
-        + String getName()
         + Existence getLocation()
         + void setLocation(Existence location)
         + void move(Existence location)
+        + String toString()
+        + int hashCode()
+        + boolean equals(Object obj)
     }
 
     Existence <|-- Car
@@ -153,7 +187,9 @@ package things {
         + Phone(String name, Existence currentLocation)
         + Existence getLocation()
         + void setLocation(Existence location)
-        + String getName()
+        + String toString()
+        + int hashCode()
+        + boolean equals(Object obj)
     }
 
     Existence <|-- Phone
@@ -167,10 +203,37 @@ package things {
         + String getText()
         + Existence getLocation()
         + void setLocation(Existence location)
-        + String getName()
+        + String toString()
+        + int hashCode()
+        + boolean equals(Object obj)
     }
 
     Readable <|-- Telegram
     Existence <|-- Telegram
+
+    class Paper {
+        - ArrayList<Existence> story
+        - HashMap<Existence, Advertisement>
+        - String name
+        - Existence currentLocation
+        + Paper(String name, String text)
+        + Paper(String name, String text, Existence currentLocation)
+        + addObject(Existence object)
+        + String getText()
+        + Existence getLocation()
+        + void setLocation(Existence location)
+        + String toString()
+        + int hashCode()
+        + boolean equals(Object obj)
+    }
+
+    Readable <|-- Paper
+    Existence <|-- Paper
+
+    class Advertisement {
+        - String text
+        + Advertisement()
+        + Advertisement(String text)
+    }
 }
 @endum
