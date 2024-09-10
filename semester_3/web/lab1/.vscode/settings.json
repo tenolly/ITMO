@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": [
+        "server"
+    ],
+    "java.project.referencedLibraries": [
+        "c:\\Dev\\ITMO\\semester_3\\web\\lab1\\lib\\fastcgi-lib.jar"
+    ]
+}
