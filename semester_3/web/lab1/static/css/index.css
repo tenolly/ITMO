@@ -99,6 +99,12 @@ input[type="text"]:focus {
     grid-template-columns: repeat(4, 1fr);
 }
 
+#result {
+    padding-bottom: 1px;
+    overflow-y: auto;
+    max-height: calc(100vh - 130px);
+}
+
 .result-container > div {
     padding: 5px;
     box-shadow: 1px 1px #000000;

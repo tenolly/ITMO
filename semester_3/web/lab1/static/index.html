@@ -60,6 +60,7 @@
                     <div style="border-top: 1px solid #000000;">R</div>
                     <div style="border-top: 1px solid #000000;">Попал?</div>
                 </div>
+                <div class="result-container" id="result"></div>
             </div>
         </main>
     </div>
@@ -73,7 +74,7 @@
                 "x": $("input[name='x-value']:checked").val(),
                 "y": $("input[name='y-value']").val(),
                 "r": $("input[name='r-value']:checked").val()
-            }
+            };
 
             if (isNaN(+jsonData.x) || isNaN(+jsonData.y) || isNaN(+jsonData.r) || +jsonData.y < -5 || +jsonData.y > 3) {
                 alert("Некорректные данные");
@@ -83,9 +84,21 @@
             $.ajax({
                 url: "/fcgi-bin/?" + $.param(jsonData),
                 type: "GET",
-                dataType: "text",
+                dataType: "json",
                 success: function(response) {
-                    console.log(response)
+                    if (response.error != null) {
+                        alert("Ответ от сервера не получен");
+                        console.log(response);
+                    } else {
+                        if (response.result) {
+                            $("#result").prepend($("<div></div>").text("Да"));
+                        } else {
+                            $("#result").prepend($("<div></div>").text("Нет"));
+                        }
+                        $("#result").prepend($("<div></div>").text(jsonData.r));
+                        $("#result").prepend($("<div></div>").text(jsonData.y));
+                        $("#result").prepend($("<div></div>").text(jsonData.x));
+                    }
                 },
                 error: function(xhr, status, error) {
                     alert(error)
