@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright The WildFly Authors
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<module name="org.wildfly.clustering.infinispan.embedded.spi" xmlns="urn:jboss:module:1.9">
+
+    <properties>
+        <property name="jboss.api" value="private"/>
+    </properties>
+
+    <resources>
+        <resource-root path="wildfly-clustering-infinispan-embedded-spi-33.0.1.Final.jar"/>
+    </resources>
+
+    <dependencies>
+        <module name="org.infinispan.commons"/>
+        <module name="org.infinispan.core"/>
+        <module name="org.infinispan.protostream"/>
+        <module name="org.jboss.logging"/>
+        <module name="org.jboss.modules"/>
+        <module name="org.jgroups" optional="true"/>
+        <module name="org.wildfly.clustering.context"/>
+        <module name="org.wildfly.clustering.infinispan.embedded.api"/>
+        <module name="org.wildfly.clustering.infinispan.marshalling"/>
+        <module name="org.wildfly.clustering.marshalling.api"/>
+        <module name="org.wildfly.clustering.marshalling.protostream"/>
+        <module name="org.wildfly.clustering.marshalling.spi"/>
+        <module name="org.wildfly.common"/>
+        <module name="org.wildfly.security.elytron-private"/>
+    </dependencies>
+</module>

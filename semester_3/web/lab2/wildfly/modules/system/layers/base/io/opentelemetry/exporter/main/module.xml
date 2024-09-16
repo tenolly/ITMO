@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright The WildFly Authors
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<module name="io.opentelemetry.exporter" xmlns="urn:jboss:module:1.9">
+    <properties>
+        <property name="jboss.api" value="private"/>
+    </properties>
+
+    <resources>
+        <resource-root path="opentelemetry-exporter-common-1.29.0.jar"/>
+        <resource-root path="opentelemetry-exporter-otlp-1.29.0.jar"/>
+        <resource-root path="opentelemetry-exporter-otlp-common-1.29.0.jar"/>
+        <resource-root path="jackson-jr-objects-2.15.4.jar"/>
+    </resources>
+
+    <dependencies>
+        <module name="io.opentelemetry.api"/>
+        <module name="io.opentelemetry.sdk"/>
+        <module name="io.opentelemetry.context"/>
+        <module name="io.opentelemetry.otlp"/>
+        <module name="com.fasterxml.jackson.core.jackson-core"/>
+        <module name="io.smallrye.opentelemetry" services="import"/>
+        <module name="org.slf4j"/>
+
+        <module name="java.logging"/>
+        <module name="java.net.http"/>
+        <module name="jdk.unsupported"/>
+    </dependencies>
+</module>

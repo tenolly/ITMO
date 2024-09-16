@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright The WildFly Authors
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<module name="org.wildfly.clustering.web.spi" xmlns="urn:jboss:module:1.9">
+
+    <properties>
+        <property name="jboss.api" value="private"/>
+    </properties>
+
+    <resources>
+        <resource-root path="wildfly-clustering-web-spi-33.0.1.Final.jar"/>
+    </resources>
+
+    <dependencies>
+        <module name="org.wildfly.clustering.ee.spi"/>
+        <module name="org.wildfly.clustering.marshalling.spi"/>
+        <module name="org.wildfly.clustering.web.api"/>
+        <!-- Enable dynamic discovery of session identifier serializer -->
+        <module name="org.wildfly.clustering.web.undertow" services="import" optional="true"/>
+    </dependencies>
+</module>
