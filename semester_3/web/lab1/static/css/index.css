@@ -96,7 +96,7 @@ input[type="text"]:focus {
 .result-container {
     display: grid;
     text-align: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 }
 
 #result {

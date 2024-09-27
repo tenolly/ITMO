@@ -19,7 +19,7 @@ java -DFCGI_PORT=35473 -jar ~/web/lab1/httpd-root/fcgi-bin/app.jar
 ```
 6) Пробросим себе порты на комп (s409429 - юзернейм на helios, 38141 - порт, который слушает Apache)
 ```bash
-ssh -p 2222 s409429@helios.cs.ifmo.ru -L 8080:localhost:38141
+ssh -p 2222 s409429@helios.cs.ifmo.ru -L 8888:localhost:38141
 ```
 7) Осталось проверить, что все работает 
     - html страница доступна по `http://localhost:8080`

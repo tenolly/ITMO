@@ -55,10 +55,12 @@
             <div>
                 <div class="result-title">Результат</div>
                 <div class="result-container">
+                    <div style="border-top: 1px solid #000000;">Время</div>
                     <div style="border-top: 1px solid #000000;">X</div>
                     <div style="border-top: 1px solid #000000;">Y</div>
                     <div style="border-top: 1px solid #000000;">R</div>
                     <div style="border-top: 1px solid #000000;">Попал?</div>
+                    <div style="border-top: 1px solid #000000;">Время выполнения</div>
                 </div>
                 <div class="result-container" id="result"></div>
             </div>
@@ -90,6 +92,7 @@
                         alert("Ответ от сервера не получен");
                         console.log(response);
                     } else {
+                        $("#result").prepend($("<div></div>").text(response.exec_time + " ms"));
                         if (response.result) {
                             $("#result").prepend($("<div></div>").text("Да"));
                         } else {
@@ -98,6 +101,7 @@
                         $("#result").prepend($("<div></div>").text(jsonData.r));
                         $("#result").prepend($("<div></div>").text(jsonData.y));
                         $("#result").prepend($("<div></div>").text(jsonData.x));
+                        $("#result").prepend($("<div></div>").text(response.current_time.split(" ")[1]));
                     }
                 },
                 error: function(xhr, status, error) {

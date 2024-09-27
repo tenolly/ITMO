@@ -12,6 +12,6 @@ public class Checker {
     }
 
     private static boolean inCircle(int x, float y, float r) {
-        return x <= 0 && y >= 0 && x >= -r && y <= r && (Math.pow(x, 2) + Math.pow(y, 2) - Math.pow(r, 2) < 0);
+        return x <= 0 && y >= 0 && x >= -r && y <= r && ((Math.pow(x, 2) + Math.pow(y, 2) - Math.pow(r, 2)) <= 0);
     }
 }
