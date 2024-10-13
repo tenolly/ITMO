@@ -6,9 +6,9 @@
               version="2.3">
 
     <managed-bean>
-        <managed-bean-name>startPageBean</managed-bean-name>
-        <managed-bean-class>org.server.StartPageBean</managed-bean-class>
-        <managed-bean-scope>session</managed-bean-scope>
+        <managed-bean-name>formBean</managed-bean-name>
+        <managed-bean-class>org.server.FormBean</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
     </managed-bean>
 
     <navigation-rule>

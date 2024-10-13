@@ -1,3 +1,7 @@
+* {
+    font-family: sans-serif;
+}
+
 input[type="radio"] {
     cursor: pointer;
 }
@@ -43,7 +47,7 @@ input[type="text"]:focus {
     margin: 20px auto;
 }
 
-#y-input {
+#x-input, #y-input {
     height: 18px;
     width: 323px;
     text-indent: 3px;
@@ -71,7 +75,7 @@ input[type="text"]:focus {
 .result-container {
     display: grid;
     text-align: center;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 #result {

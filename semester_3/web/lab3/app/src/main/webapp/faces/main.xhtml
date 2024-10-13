@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+    <meta charset="UTF-8"/>
+    <title>Лабораторная работа №3</title>
+    <link rel="stylesheet" href="../static/css/header.css"/>
+    <link rel="stylesheet" href="../static/css/main.css"/>
+    <link rel="icon" type="image/jpg" href="../static/media/favicon.ico"/>
+</h:head>
+
+<body>
+    <div class="content-container">
+        <header class="header">
+            <div class="header-container">
+                <div>Пышкин Никита Сергеевич P3213</div>
+                <div></div>
+                <div>Вариант 654</div>
+            </div>
+        </header>
+        <h:form action="/server/check" method="get" id="form">
+            <main class="main">
+                <div class="main__left-column">
+                    <div class="main__block" id="graph-container">
+                        <ui:include src="../static/media/graph.svg" />
+                    </div>
+                    <div class="main__block">
+                        <div class="row">Параметры</div>
+                        <div class="row">
+                            <div>Выберете X:</div>
+                            <p:spinner value="#{formBean.x}" min="-3" max="3" stepFactor="1" id="x-input"/>
+                        </div>
+                        <div class="row">
+                            <div>Выберете Y:</div>
+                            <p:inputText id="y-input" value="#{formBean.y}" required="true" />
+                            <p:message for="y-input" />
+                        </div>
+                        <div class="row">
+                            <div>Выберете R:</div>
+                            <h:selectOneRadio value="#{formBean.r}">
+                                <f:selectItem itemValue="1" itemLabel="1" />
+                                <f:selectItem itemValue="1.5" itemLabel="1.5" />
+                                <f:selectItem itemValue="2" itemLabel="2" />
+                                <f:selectItem itemValue="2.5" itemLabel="2.5" />
+                                <f:selectItem itemValue="3" itemLabel="3" />
+                            </h:selectOneRadio>
+                        </div>
+                    </div>
+                    <h:commandButton value="Проверить" action="#{formBean.check}" styleClass="main__block submit_button" />
+                </div>
+                <div>
+                    <div class="result-title">Результат</div>
+                    <div class="result-container">
+                        <div style="border-top: 1px solid #000000;">X</div>
+                        <div style="border-top: 1px solid #000000;">Y</div>
+                        <div style="border-top: 1px solid #000000;">R</div>
+                        <div style="border-top: 1px solid #000000;">Попал?</div>
+                    </div>
+                </div>
+            </main>
+        </h:form>
+    </div>
+</body>
+
+</html>

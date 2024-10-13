@@ -9,25 +9,26 @@ repositories {
 }
 
 dependencies {
-  compileOnly('jakarta.enterprise:jakarta.enterprise.cdi-api:4.0.1')
-  compileOnly('jakarta.validation:jakarta.validation-api:3.0.2')
-  compileOnly('jakarta.ejb:jakarta.ejb-api:4.0.1')
-  compileOnly('jakarta.faces:jakarta.faces-api:3.0.0')
-  compileOnly('jakarta.servlet:jakarta.servlet-api:6.0.0')
-  compileOnly('jakarta.persistence:jakarta.persistence-api:3.1.0')
-  compileOnly('jakarta.platform:jakarta.jakartaee-web-api:9.0.0')
-  compileOnly('jakarta.json:jakarta.json-api:2.1.1')
-  compileOnly('jakarta.json.bind:jakarta.json.bind-api:3.0.0')
+  compileOnly 'jakarta.enterprise:jakarta.enterprise.cdi-api:4.0.1'
+  compileOnly 'jakarta.validation:jakarta.validation-api:3.0.2'
+  compileOnly 'jakarta.ejb:jakarta.ejb-api:4.0.1'
+  compileOnly 'jakarta.faces:jakarta.faces-api:3.0.0'
+  compileOnly 'org.primefaces:primefaces:12.0.0'
+  compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+  compileOnly 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+  compileOnly 'jakarta.platform:jakarta.jakartaee-web-api:9.0.0'
+  compileOnly 'jakarta.json:jakarta.json-api:2.1.1'
+  compileOnly 'jakarta.json.bind:jakarta.json.bind-api:3.0.0'
 
-  implementation('org.postgresql:postgresql:42.6.0')
-  implementation('org.hibernate:hibernate-core:6.2.6.Final')
-  implementation('org.primefaces:primefaces:13.0.0:jakarta')
+  implementation 'org.postgresql:postgresql:42.6.0'
+  implementation 'org.hibernate:hibernate-core:6.2.6.Final'
+  implementation 'org.primefaces:primefaces:13.0.0:jakarta'
 
-  implementation('com.google.guava:guava:31.0.1-jre')
-  implementation('org.apache.commons:commons-lang3:3.12.0')
-  implementation('com.google.code.gson:gson:2.10.1')
+  implementation 'com.google.guava:guava:31.0.1-jre'
+  implementation 'org.apache.commons:commons-lang3:3.12.0'
+  implementation 'com.google.code.gson:gson:2.10.1'
 
-  runtimeOnly('org.flywaydb:flyway-gradle-plugin:9.16.1')
+  runtimeOnly 'org.flywaydb:flyway-gradle-plugin:9.16.1'
 }
 
 java {

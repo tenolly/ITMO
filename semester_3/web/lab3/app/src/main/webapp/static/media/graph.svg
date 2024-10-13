@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="400" width="400">
-    <polygon points="200,200 370,200 200,370" fill-opacity="0.5" fill="#1638b2"/>
-    <rect x="200" y="115" width="170" height="85" fill-opacity="0.5" fill="#1638b2"/>
-    <path d="M 200 30 A 170 170 0 0 0 30 200 L 200 200" fill-opacity="0.5" fill="#1638b2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 440 440" class="graph" id="graph">
+    <polygon points="200,200 370,200 200,285" fill-opacity="0.5" fill="#1638b2"/>
+    <rect x="115" y="30" width="85" height="170" fill-opacity="0.5" fill="#1638b2"/>
+    <path d="M 200 115 A 80 80 0 0 0 115 200 L 200 200" fill-opacity="0.5" fill="#1638b2" transform="rotate(90, 200, 200)" />
 
     <line x1="0" y1="200" x2="400" y2="200" stroke="#000000"/>
     <line x1="200" y1="0" x2="200" y2="400" stroke="#000000"/>
