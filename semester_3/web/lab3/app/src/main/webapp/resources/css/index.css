@@ -1,0 +1,55 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    font-size: 16px;
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: minmax(max-content, 2fr) 6fr minmax(max-content, 1fr);
+    line-height: 55px;
+    height: 55px;
+    width: calc(100% - 40px);
+    margin: auto;
+}
+
+@font-face {
+    font-family: "ClockFont";
+    src: url("resources/fonts/digital-7/digital-7.ttf");
+}
+
+a {
+    text-decoration: none;
+}
+
+.link-to-main-page {
+    display: block;
+    width: 100%;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    line-height: 80vh;
+    text-align: center;
+}
+
+.clock {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 280px;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+}
+
+#time {
+    text-align: center;
+    font-size: 34px;
+    font-family: "ClockFont";
+    color: rgb(98, 208, 46);
+}

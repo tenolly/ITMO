@@ -11,9 +11,9 @@
 <h:head>
     <meta charset="UTF-8"/>
     <title>Лабораторная работа №3</title>
-    <link rel="stylesheet" href="../static/css/header.css"/>
-    <link rel="stylesheet" href="../static/css/main.css"/>
-    <link rel="icon" type="image/jpg" href="../static/media/favicon.ico"/>
+    <script defer="defer" src="#{resource['js/main.js']}"></script>
+    <link rel="stylesheet" href="#{resource['css/main.css']}"/>
+    <link rel="icon" type="image/jpg" href="#{resource['media/favicon.ico']}"/>
 </h:head>
 
 <body>
@@ -23,28 +23,29 @@
                 <div>Пышкин Никита Сергеевич P3213</div>
                 <div></div>
                 <div>Вариант 654</div>
+                <h:link value="Вернуться" outcome="index" />
             </div>
         </header>
-        <h:form action="/server/check" method="get" id="form">
+        <h:form method="get" id="form">
             <main class="main">
                 <div class="main__left-column">
                     <div class="main__block" id="graph-container">
-                        <ui:include src="../static/media/graph.svg" />
+                        <ui:include src="../resources/media/graph.svg" />
                     </div>
                     <div class="main__block">
                         <div class="row">Параметры</div>
                         <div class="row">
                             <div>Выберете X:</div>
-                            <p:spinner value="#{formBean.x}" min="-3" max="3" stepFactor="1" id="x-input"/>
+                            <p:spinner id="x" value="#{formBean.x}" min="-3" max="3" stepFactor="1" styleClass="spinner"/>
                         </div>
                         <div class="row">
                             <div>Выберете Y:</div>
-                            <p:inputText id="y-input" value="#{formBean.y}" required="true" />
-                            <p:message for="y-input" />
+                            <p:inputText id="y" value="#{formBean.y}" required="true" styleClass="input" maxlength="5" placeholder="от -5 до 3"/>
+                            <p:message for="y" />
                         </div>
-                        <div class="row">
-                            <div>Выберете R:</div>
-                            <h:selectOneRadio value="#{formBean.r}">
+                        <div class="row" style="display:flex">
+                            <div style="padding-top:3px">Выберете R:</div>
+                            <h:selectOneRadio id="r" value="#{formBean.r}">
                                 <f:selectItem itemValue="1" itemLabel="1" />
                                 <f:selectItem itemValue="1.5" itemLabel="1.5" />
                                 <f:selectItem itemValue="2" itemLabel="2" />
@@ -53,18 +54,38 @@
                             </h:selectOneRadio>
                         </div>
                     </div>
-                    <h:commandButton value="Проверить" action="#{formBean.check}" styleClass="main__block submit_button" />
+                    <h:commandButton value="Проверить" onclick="return validateForm()" styleClass="main__block submit_button">
+                        <f:ajax render="@form, :form:table" execute="@form" listener="#{formBean.check()}"/>
+                    </h:commandButton>
                 </div>
                 <div>
                     <div class="result-title">Результат</div>
-                    <div class="result-container">
-                        <div style="border-top: 1px solid #000000;">X</div>
-                        <div style="border-top: 1px solid #000000;">Y</div>
-                        <div style="border-top: 1px solid #000000;">R</div>
-                        <div style="border-top: 1px solid #000000;">Попал?</div>
-                    </div>
+                    <p:dataTable value="#{tableBean.points}" var="point" rendered="#{not empty tableBean.points}" id="table">
+                        <p:column headerText="X" style="text-align: center;">
+                            <h:outputText value="#{point.x}" />
+                        </p:column>
+                        <p:column headerText="Y" style="text-align: center;">
+                            <h:outputText value="#{point.y}" />
+                        </p:column>
+                        <p:column headerText="R" style="text-align: center;">
+                            <h:outputText value="#{point.r}" />
+                        </p:column>
+                        <p:column headerText="Попал?" style="text-align: center;">
+                            <h:outputText value="#{point.result ? 'Да' : 'Нет'}" />
+                            <!--<h:outputText value="#{point.result ? 'Да' : 'Нет'}" style="color: #{point.result ? 'green' : 'red'}" />-->
+                        </p:column>
+                    </p:dataTable>
                 </div>
             </main>
+        </h:form>
+        <h:form id="checkForm">
+            <h:inputHidden id="hiddenX" value="#{formBean.x}" />
+            <h:inputHidden id="hiddenY" value="#{formBean.y}" />
+            <h:inputHidden id="hiddenR" value="#{formBean.r}" />
+            
+            <h:commandButton id="checkButton" action="#{formBean.check()}" style="display:none">
+                <f:ajax render="@form, :form:table" execute="@form" />
+            </h:commandButton>
         </h:form>
     </div>
 </body>

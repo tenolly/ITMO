@@ -5,12 +5,6 @@
                                   http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
               version="2.3">
 
-    <managed-bean>
-        <managed-bean-name>formBean</managed-bean-name>
-        <managed-bean-class>org.server.FormBean</managed-bean-class>
-        <managed-bean-scope>application</managed-bean-scope>
-    </managed-bean>
-
     <navigation-rule>
         <from-view-id>/faces/index.xhtml</from-view-id>
         <navigation-case>

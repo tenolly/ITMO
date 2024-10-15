@@ -2,6 +2,32 @@
     font-family: sans-serif;
 }
 
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    font-size: 16px;
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: minmax(max-content, 2fr) 5fr minmax(max-content, 1fr) minmax(max-content, 1fr);
+    line-height: 55px;
+    height: 55px;
+    width: calc(100% - 40px);
+    margin: auto;
+}
+
 input[type="radio"] {
     cursor: pointer;
 }
@@ -44,19 +70,24 @@ input[type="text"]:focus {
     display: block;
     height: 350px;
     width: 350px;
+    border: 1px solid black;
     margin: 20px auto;
 }
 
-#x-input, #y-input {
-    height: 18px;
-    width: 323px;
-    text-indent: 3px;
+.input {
+    height: 23px;
+    margin-left: 5px;
+}
+
+.spinner {
+    margin-left: 5px;
 }
 
 .submit_button {
     background-color: #ffffff;
     cursor: pointer;
     font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .submit_button:hover {
