@@ -1,3 +1,26 @@
+function processPoints() {
+    const r = $('input[name="form:r"]:checked').val();
+
+    const rows = document.querySelectorAll("#form\\:table tbody tr");
+    rows.forEach(row => {
+        const cells = row.querySelectorAll("td");
+        drawPoint(+cells[0].innerText, +cells[1].innerText, r, cells[3].innerText === "Да");
+    });
+}
+
+function drawPoint(x, y, r, result) {
+    let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    circle.setAttribute("cx", x * 190 / r + 200);
+    circle.setAttribute("cy", -y * 190 / r + 200);
+    circle.setAttribute("r", 4);
+
+    circle.style.stroke = "black";
+    circle.style["stroke-width"] = "1px";
+    circle.style.fill = result? "#0ecc14" : "#d1220f";
+    
+    $("#graph").append(circle);
+}
+
 function checkData(x, y, r) {
     let resp = {
         isValid: true,
@@ -19,19 +42,6 @@ function checkData(x, y, r) {
     }
     
     return resp;
-}
-
-function drawPoint(x, y, r, result) {
-    let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    circle.setAttribute("cx", x * 170 / r + 200);
-    circle.setAttribute("cy", -y * 170 / r + 200);
-    circle.setAttribute("r", 4);
-
-    circle.style.stroke = "black";
-    circle.style["stroke-width"] = "1px";
-    circle.style.fill = result? "#0ecc14" : "#d1220f";
-    
-    $("#graph").append(circle);
 }
 
 function validateForm() {

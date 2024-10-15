@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <h:commandButton value="Проверить" onclick="return validateForm()" styleClass="main__block submit_button">
-                        <f:ajax render="@form, :form:table" execute="@form" listener="#{formBean.check()}"/>
+                        <f:ajax render="@form, :form:table" execute="@form" listener="#{formBean.check()}" onevent="processPoints"/>
                     </h:commandButton>
                 </div>
                 <div>
@@ -71,8 +71,7 @@
                             <h:outputText value="#{point.r}" />
                         </p:column>
                         <p:column headerText="Попал?" style="text-align: center;">
-                            <h:outputText value="#{point.result ? 'Да' : 'Нет'}" />
-                            <!--<h:outputText value="#{point.result ? 'Да' : 'Нет'}" style="color: #{point.result ? 'green' : 'red'}" />-->
+                            <h:outputText value="#{point.result ? 'Да' : 'Нет'}" style="color: #{point.result ? 'green' : 'red'}" />
                         </p:column>
                     </p:dataTable>
                 </div>
@@ -84,7 +83,7 @@
             <h:inputHidden id="hiddenR" value="#{formBean.r}" />
             
             <h:commandButton id="checkButton" action="#{formBean.check()}" style="display:none">
-                <f:ajax render="@form, :form:table" execute="@form" />
+                <f:ajax render="@form, :form:table" execute="@form" onevent="processPoints" />
             </h:commandButton>
         </h:form>
     </div>
