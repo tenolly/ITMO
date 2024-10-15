@@ -1,5 +1,11 @@
+$(document).on("change", 'input[name="form:r"]', function() {
+    processPoints();
+});
+
 function processPoints() {
     const r = $('input[name="form:r"]:checked').val();
+
+    $("#graph circle").remove();
 
     const rows = document.querySelectorAll("#form\\:table tbody tr");
     rows.forEach(row => {
