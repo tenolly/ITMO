@@ -1,0 +1,3 @@
+[submodule "assignment-1-io-library"]
+	path = io-library
+	url = https://gitlab.se.ifmo.ru/tenoly/assignment-1-io-library

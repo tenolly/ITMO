@@ -1,0 +1,6 @@
+# Ignore build files
+build
+
+# Ignore python cache files
+.pytest_cache
+__pycache__

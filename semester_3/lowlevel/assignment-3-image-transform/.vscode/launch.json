@@ -1,0 +1,24 @@
+{
+    // Используйте IntelliSense, чтобы узнать о возможных атрибутах.
+    // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
+    // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(Windows) Запустить",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/solution/image-transform.exe",
+            "args": [
+                "C:\\Dev\\ITMO\\semester_3\\lowlevel\\assignment-3-image-transform\\tester\\tests\\6\\input.bmp",
+                "C:\\Dev\\ITMO\\semester_3\\lowlevel\\assignment-3-image-transform\\tester\\tests\\6\\output.bmp",
+                "none"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "externalTerminal"
+        }
+
+    ]
+}

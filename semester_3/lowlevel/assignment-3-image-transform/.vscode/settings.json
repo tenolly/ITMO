@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "inttypes.h": "c",
+        "bmp.h": "c",
+        "cstdio": "c",
+        "stdint.h": "c",
+        "stdio.h": "c",
+        "transform.h": "c",
+        "stdlib.h": "c",
+        "string.h": "c",
+        "image.h": "c"
+    }
+}
