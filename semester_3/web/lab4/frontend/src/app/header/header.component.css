@@ -11,7 +11,7 @@ a {
     text-decoration: none;
 }
 
-.header {
+.header, button {
     font-size: 16px;
     text-align: center;
     font-family: sans-serif;
@@ -26,4 +26,18 @@ a {
     height: 55px;
     width: calc(100% - 40px);
     margin: auto;
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+    .header-container {
+        grid-template-columns: minmax(max-content, 1fr) minmax(max-content, 1fr);
+    }
 }

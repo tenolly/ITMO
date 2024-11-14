@@ -12,3 +12,9 @@ html, body {
 a {
     text-decoration: none;
 }
+
+@media (max-width: 1023px) {
+    .mobile-hidden {
+        display: none;
+    }
+}

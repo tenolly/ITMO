@@ -16,8 +16,8 @@ function processPoints() {
 
 function drawPoint(x, y, r, result) {
     let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    circle.setAttribute("cx", x * 190 / r + 200);
-    circle.setAttribute("cy", -y * 190 / r + 200);
+    circle.setAttribute("cx", x * 170 / r + 200);
+    circle.setAttribute("cy", -y * 170 / r + 200);
     circle.setAttribute("r", 4);
 
     circle.style.stroke = "black";
@@ -72,8 +72,8 @@ $(document).on("click", "#graph", function(e) {
         return;
     }
 
-    let calculatedX = (e.pageX - $(this).offset().left - $(this).width() / 2) / 150 * rValue;
-    let calculatedY = ($(this).height() / 2 - (e.pageY - $(this).offset().top)) / 150 * rValue;
+    let calculatedX = (e.pageX - $(this).offset().left - $(this).width() / 2) / 135 * rValue;
+    let calculatedY = ($(this).height() / 2 - (e.pageY - $(this).offset().top)) / 135 * rValue;
 
     let result = checkData(calculatedX, calculatedY, rValue)
     if (!result.isValid) {
