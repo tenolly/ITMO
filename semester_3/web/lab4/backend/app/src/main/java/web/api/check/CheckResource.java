@@ -46,7 +46,11 @@ public class CheckResource {
                     PostgreSQLJDBC.insertPoint(connection, point);
                     return Response.ok().entity(point.getResult()).build();
                 } else {
-                    return Response.status(Response.Status.BAD_REQUEST).entity("invalid params").build();
+                    String errMessage = "invalid params";
+                    if (!Area.Validator.validateR(r)) errMessage = "invalid R = " + r;
+                    else if (!Area.Validator.validateX(x)) errMessage = "invalid X = " + x;
+                    else if (!Area.Validator.validateY(y)) errMessage = "invalid Y = " + y;
+                    return Response.status(Response.Status.BAD_REQUEST).entity(errMessage).build();
                 }
             } catch (SQLException e) {
                 e.printStackTrace();

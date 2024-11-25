@@ -13,7 +13,6 @@ export class AuthInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(req).pipe(
             catchError((error: HttpErrorResponse) => {
-                console.log(error.status, !this.isRefreshing)
                 if (error.status === 401 && !this.isRefreshing) {
                     this.isRefreshing = true;
 

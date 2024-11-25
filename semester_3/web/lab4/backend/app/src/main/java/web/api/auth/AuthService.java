@@ -23,7 +23,7 @@ import javax.crypto.SecretKey;
 @Path("/auth")
 public class AuthService {
     private static final SecretKey SECRET_KEY_SPEC = AuthConfig.getSecretKeySpec();
-    private static final int ACCESS_TOKEN_EXPIRATION = 30 * 60 * 1000; // 30 минут
+    private static final int ACCESS_TOKEN_EXPIRATION = 2 * 60 * 1000; // 2 минуты
     private static final int REFRESH_TOKEN_EXPIRATION = 24 * 60 * 60 * 1000; // 1 день
 
     @POST
@@ -117,8 +117,6 @@ public class AuthService {
             return Response.status(Response.Status.BAD_REQUEST).entity("no refresh token").build();
         }
 
-        System.out.println("Refresh tokens");
-
         try {
             Claims claims = validateToken(refreshToken);
             String username = claims.getSubject();
@@ -133,15 +131,11 @@ public class AuthService {
             NewCookie newRefreshCookie = new NewCookie.Builder("refresh_token")
                 .value(newRefreshToken).path("/").maxAge(REFRESH_TOKEN_EXPIRATION).httpOnly(true)
                 .sameSite(NewCookie.SameSite.STRICT).build();
-            
-            System.out.println("Tokens refreshed");
 
             return Response.ok().cookie(newAccessCookie, newRefreshCookie).build();
         } catch (ExpiredJwtException e) {
-            e.printStackTrace();
             return Response.status(Response.Status.UNAUTHORIZED).entity("refresh token expired").build();
         } catch (JwtException e) {
-            e.printStackTrace();
             return Response.status(Response.Status.UNAUTHORIZED).entity("invalid refresh token").build();
         }
     }

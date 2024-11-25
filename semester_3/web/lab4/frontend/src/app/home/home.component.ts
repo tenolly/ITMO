@@ -92,8 +92,8 @@ export class HomeComponent implements OnInit {
                 const result = /^true$/i.test(response);
                 this.drawPoint(calculatedX, calculatedY, rValue, result);
                 this.results.unshift({
-                    x: calculatedX,
-                    y: calculatedY,
+                    x: parseFloat(calculatedX.toFixed(2)),
+                    y: parseFloat(calculatedY.toFixed(2)),
                     r: rValue,
                     hit: result,
                     color: result ? 'green' : 'red'
