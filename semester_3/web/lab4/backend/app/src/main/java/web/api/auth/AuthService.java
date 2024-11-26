@@ -30,6 +30,18 @@ public class AuthService {
     @Path("/register")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_FORM_URLENCODED})
     public Response registerUser(User user) {
+        if (user.getUsername().length() < 6 || user.getUsername().length() > 18) {
+            return Response.status(Response.Status.BAD_REQUEST)
+                           .entity("username must be between 6 and 18 characters")
+                           .build();
+        }
+    
+        if (user.getPassword().length() < 6 || user.getPassword().length() > 18) {
+            return Response.status(Response.Status.BAD_REQUEST)
+                           .entity("password must be between 6 and 18 characters")
+                           .build();
+        }
+
         try (Connection connection = PostgreSQLJDBC.connect()) {
             if (PostgreSQLJDBC.usernameExists(connection, user.getUsername())) {
                 return Response.status(Response.Status.BAD_REQUEST).entity("user already exists").build();
