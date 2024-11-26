@@ -154,7 +154,7 @@ public class PostgreSQLJDBC {
         String query = "SELECT p.x, p.y, p.r, p.result FROM points p "
                     + "JOIN users u ON p.owner_id = u.id "
                     + "WHERE u.username = ? "
-                    + "ORDER BY p.id DESC LIMIT 11";
+                    + "ORDER BY p.id DESC LIMIT 20";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, username);
@@ -172,6 +172,7 @@ public class PostgreSQLJDBC {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        
         return points;
     }
 }

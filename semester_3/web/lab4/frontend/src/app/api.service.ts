@@ -10,6 +10,10 @@ export class ApiService {
 
     constructor(private http: HttpClient) { }
 
+    getLastPoints(): Observable<any> {
+        return this.http.get(`${this.apiUrl}/points`, { withCredentials: true, responseType: 'json' });
+    }
+
     check(x: number, y: number, r: number): Observable<any> {
         return this.http.get(`${this.apiUrl}/check?x=${x}&y=${y}&r=${r}`, { withCredentials: true, responseType: 'text' });
     }

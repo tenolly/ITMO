@@ -19,9 +19,11 @@ export class HomeComponent implements OnInit {
     results: { x: number; y: number; r: number; hit: boolean, color: string }[] = [];
 
     constructor(
-        private fb: FormBuilder, private apiService: ApiService,
-        private el: ElementRef, private renderer: Renderer2
-    ) { }
+        private fb: FormBuilder,
+        private apiService: ApiService,
+        private el: ElementRef,
+        private renderer: Renderer2
+    ) {}
 
     removePoints() {
         const svg = this.el.nativeElement.querySelector('#graph');
@@ -68,6 +70,32 @@ export class HomeComponent implements OnInit {
             yValue: ['', [Validators.required, Validators.pattern(/^-?[0-9]*\.?[0-9]+$/)]],
             ...dynamicXFields,
             ...dynamicRFields
+        });
+
+        this.loadLastPoints();
+    }
+
+    loadLastPoints(): void {
+        this.apiService.getLastPoints().subscribe({
+            next: (points) => {
+                points.forEach((point: { _: number, x: number, y: number, r: number, result: boolean }) => {
+                    const color = point.result ? 'green' : 'red';
+                    this.results.push({
+                        x: parseFloat(point.x.toFixed(2)),
+                        y: parseFloat(point.y.toFixed(2)),
+                        r: point.r,
+                        hit: point.result,
+                        color: color
+                    });
+
+                    if (this.selectedR !== null && this.validateRValue(this.selectedR)) {
+                        this.drawPoint(point.x, point.y, this.selectedR, point.result);
+                    }
+                });
+            },
+            error: (error) => {
+                console.error('Ошибка при загрузке последних точек:', error);
+            }
         });
     }
 
