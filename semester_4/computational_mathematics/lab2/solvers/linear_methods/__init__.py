@@ -1,0 +1,3 @@
+from ._simple_iteration_method import simple_iteration_method as simple_iteration_linear_method
+from ._bisection_method import bisection_method as bisection_linear_method
+from ._newton_method import newton_method as newton_linear_method

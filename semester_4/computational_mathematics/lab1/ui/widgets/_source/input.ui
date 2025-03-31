@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>621</width>
+    <height>597</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QPushButton" name="upload_from_file">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>560</y>
+     <width>201</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    font: 11pt &quot;Consolas&quot;;
+}
+
+QPushButton:hover {
+    background-color: #1E1E1E;
+}</string>
+   </property>
+   <property name="text">
+    <string>Загрузить из файла</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="matrix_box">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>601</width>
+     <height>542</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>215</x>
+     <y>558</y>
+     <width>144</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: none;</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QSlider" name="slider">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>125</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    background: #444;  /* Темный фон полосы */
+    height: 8px;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: #9C27B0;  /* Фиолетовый ползунок */
+    width: 16px;
+    height: 16px;
+    margin: -4px 0;
+    border-radius: 8px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: #AB47BC;  /* Светлый фиолетовый при наведении */
+}
+
+QSlider::sub-page:horizontal {
+    background: #BA68C8; /* Светло-фиолетовая заполненная часть */
+    border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+    background: #777; /* Темный серый незаполненной части */
+    border-radius: 4px;
+}
+</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="tracking">
+     <bool>true</bool>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLineEdit" name="slider_value">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>560</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: none;
+font: 11pt &quot;Consolas&quot;;</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="accuracy_line">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>560</y>
+     <width>201</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Consolas&quot;;</string>
+   </property>
+   <property name="maxLength">
+    <number>10</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>Введите точность</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

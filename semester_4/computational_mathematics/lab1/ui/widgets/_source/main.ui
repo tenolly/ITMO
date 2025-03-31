@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1321</width>
+    <height>794</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Вычислительная Математика. Лабораторная работа 1</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #1E1E1E;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>13</y>
+      <width>641</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;Courier New&quot;;
+background-color: #2D2D30;
+border: 1px solid #C792EA;
+color: #C792EA;</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>13</y>
+       <width>621</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Consolas&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>Входные данные</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="input_widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>65</y>
+       <width>621</width>
+       <height>597</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="clear_input_data">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>670</y>
+       <width>621</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    font: 12pt &quot;Consolas&quot;;
+}
+
+QPushButton:hover {
+    background-color: #1E1E1E;
+}</string>
+     </property>
+     <property name="text">
+      <string>Очистить ввод</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="start_calculation">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>720</y>
+       <width>621</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    font: 12pt &quot;Consolas&quot;;
+}
+
+QPushButton:hover {
+    background-color: #1E1E1E;
+}</string>
+     </property>
+     <property name="text">
+      <string>Запустить расчет</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>668</x>
+      <y>13</y>
+      <width>641</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;Courier New&quot;;
+background-color: #2D2D30;
+border: 1px solid #C792EA;</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>13</y>
+       <width>621</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #C792EA;
+font: 12pt &quot;Consolas&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>Результат</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="output_widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>65</y>
+       <width>621</width>
+       <height>696</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #C792EA;</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
