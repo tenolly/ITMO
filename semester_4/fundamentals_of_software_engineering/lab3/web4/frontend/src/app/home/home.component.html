@@ -1,0 +1,88 @@
+<main class="main">
+    <div class="main__left-column">
+        <div class="main__block">
+            <div id="graphContainer" (click)="onSvgClick($event)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" height="350" width="350" class="graph" id="graph">
+                    <polygon points="200,200 370,200 200,370" fill-opacity="0.5" fill="#1638b2" />
+                    <rect x="200" y="115" width="170" height="85" fill-opacity="0.5" fill="#1638b2" />
+                    <path d="M 30 200 A 170 170 0 0 0 200 370 L 200 200" fill-opacity="0.5" fill="#1638b2" />
+
+                    <line x1="0" y1="200" x2="400" y2="200" stroke="#000000" />
+                    <line x1="200" y1="0" x2="200" y2="400" stroke="#000000" />
+
+                    <line x1="370" y1="198" x2="370" y2="202" stroke="#000000" />
+                    <line x1="285" y1="198" x2="285" y2="202" stroke="#000000" />
+                    <line x1="115" y1="198" x2="115" y2="202" stroke="#000000" />
+                    <line x1="30" y1="198" x2="30" y2="202" stroke="#000000" />
+
+                    <line x1="198" y1="30" x2="202" y2="30" stroke="#000000" />
+                    <line x1="198" y1="115" x2="202" y2="115" stroke="#000000" />
+                    <line x1="198" y1="285" x2="202" y2="285" stroke="#000000" />
+                    <line x1="198" y1="370" x2="202" y2="370" stroke="#000000" />
+
+                    <polygon points="400,200 392,203 392,197" fill="#000000" stroke="#000000" />
+                    <polygon points="200,0 197,8 203,8" fill="#000000" stroke="#000000" />
+
+                    <text x="365" y="190" style="font-family: sans-serif">R</text>
+                    <text x="273" y="190" style="font-family: sans-serif">R/2</text>
+                    <text x="98" y="190" style="font-family: sans-serif">-R/2</text>
+                    <text x="20" y="190" style="font-family: sans-serif">-R</text>
+
+                    <text x="206" y="35" style="font-family: sans-serif">R</text>
+                    <text x="206" y="120" style="font-family: sans-serif">R/2</text>
+                    <text x="206" y="289" style="font-family: sans-serif">-R/2</text>
+                    <text x="206" y="373" style="font-family: sans-serif">-R</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="main__block">
+            <form [formGroup]="graphForm" (ngSubmit)="onSubmit()">
+                <div class="row">Параметры</div>
+                <div class="row">
+                    <div>Выберете X:</div>
+                    <div *ngFor="let x of xValues">
+                        <input type="checkbox" [formControlName]="'x' + x" [value]="x" [checked]="selectedX === x"
+                            (change)="onXChange(x, $event)" />
+                        {{ x }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div>Выберете Y:</div>
+                    <input name="y-value" id="y-input" type="text" formControlName="yValue"
+                        placeholder="значение от -5 до 3" maxlength="7" />
+                </div>
+
+                <div class="row">
+                    <div>Выберете R:</div>
+                    <div *ngFor="let r of rValues">
+                        <input type="checkbox" [formControlName]="'r' + r" [value]="r" [checked]="selectedR === r"
+                            (change)="onRChange(r, $event)" />
+                        {{ r }}
+                    </div>
+                </div>
+
+                <button type="submit" class="submit_button" style="margin-bottom: 15px;">
+                    Проверить
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <div class="result-title">Результат</div>
+        <div class="result-container">
+            <div style="border-top: 1px solid #000000;">X</div>
+            <div style="border-top: 1px solid #000000;">Y</div>
+            <div style="border-top: 1px solid #000000;">R</div>
+            <div style="border-top: 1px solid #000000;">Попал?</div>
+        </div>
+        <div *ngFor="let result of results" class="result-container" id="result">
+            <div>{{ result.x }}</div>
+            <div>{{ result.y }}</div>
+            <div>{{ result.r }}</div>
+            <div [ngClass]="result.color">{{ result.hit ? 'Да' : 'Нет' }}</div>
+        </div>
+    </div>
+</main>

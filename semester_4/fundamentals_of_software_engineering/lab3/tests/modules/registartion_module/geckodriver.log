@@ -1,0 +1,454 @@
+1745486643005	geckodriver	INFO	Listening on 127.0.0.1:51097
+1745486646041	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 98" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile86Gkpl"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745486646306	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745486646401	Marionette	INFO	Listening on port 51106
+WebDriver BiDi listening on ws://127.0.0.1:51098
+Read port: 51106
+1745486646532	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1745486654626	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1745486654857	Marionette	INFO	Stopped listening on port 51106
+Dynamically enable window occlusion 1
+1745486657655	geckodriver	INFO	Listening on 127.0.0.1:51133
+1745486660687	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 34" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilednPjfU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1745486895263	geckodriver	INFO	Listening on 127.0.0.1:51228
+1745486898332	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 29" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilemOjKo8"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745486898570	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745486898659	Marionette	INFO	Listening on port 51240
+WebDriver BiDi listening on ws://127.0.0.1:51229
+Read port: 51240
+1745486898774	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1745486902651	Marionette	INFO	Stopped listening on port 51240
+Dynamically enable window occlusion 1
+1745486905405	geckodriver	INFO	Listening on 127.0.0.1:51266
+1745486908478	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 67" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile94DyVK"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1745486933970	geckodriver	INFO	Listening on 127.0.0.1:51292
+1745486937018	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 93" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileEpM0Ne"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745486937249	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745486937335	Marionette	INFO	Listening on port 51302
+WebDriver BiDi listening on ws://127.0.0.1:51293
+Read port: 51302
+1745486937452	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+1745487190183	geckodriver	INFO	Listening on 127.0.0.1:51373
+1745487193240	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 74" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile6uJb3e"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745487193489	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745487193584	Marionette	INFO	Listening on port 51381
+WebDriver BiDi listening on ws://127.0.0.1:51374
+Read port: 51381
+1745487193705	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1745487220827	geckodriver	INFO	Listening on 127.0.0.1:51392
+1745487223876	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 93" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilexCAGAU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745487224137	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745487224260	Marionette	INFO	Listening on port 51400
+WebDriver BiDi listening on ws://127.0.0.1:51393
+Read port: 51400
+1745487224360	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1745487229205	Marionette	INFO	Stopped listening on port 51400
+Dynamically enable window occlusion 1
+1745487294518	geckodriver	INFO	Listening on 127.0.0.1:51416
+1745487297577	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 17" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile6m70WP"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745487297808	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745487297894	Marionette	INFO	Listening on port 51425
+WebDriver BiDi listening on ws://127.0.0.1:51417
+Read port: 51425
+1745487298008	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1745487299522	Marionette	INFO	Stopped listening on port 51425
+Dynamically enable window occlusion 1
+console.error: services.settings: 
+Object
+  - prototype Object
+    - columnNumber = 0
+    - data = null
+    - filename = resource://gre/modules/ServiceRequest.sys.mjs
+    - lineNumber = 126
+    - location = {"name":"open","filename":"resource://gre/modules/ServiceRequest.sys.mjs","sourceId":25,"lineNumber":126,"columnNumber":11,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch/<","sourceId":24,"lineNumber":268,"columnNumber":15,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch","sourceId":24,"lineNumber":219,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"timedFetch/<","sourceId":642,"lineNumber":569,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"timedFetch","sourceId":642,"lineNumber":544,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"request","sourceId":642,"lineNumber":634,"columnNumber":33,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"execute","sourceId":642,"lineNumber":2643,"columnNumber":36,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"_fetchChangeset","sourceId":22,"lineNumber":1212,"columnNumber":22,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"_importChanges","sourceId":22,"lineNumber":1074,"columnNumber":18,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"maybeSync","sourceId":22,"lineNumber":763,"columnNumber":35,"asyncCause":null,"asyncCaller":null,"caller":null,"formattedStack":"maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"execute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"request@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"timedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"timedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"fetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"fetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"open@resource://gre/modules/ServiceRequest.sys.mjs:126:11\nfetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}}
+    - message = 
+    - name = 
+    - result = 2152071198
+    - stack = open@resource://gre/modules/ServiceRequest.sys.mjs:126:11|fetch/<@resource://services-settings/Utils.sys.mjs:268:15|fetch@resource://services-settings/Utils.sys.mjs:219:12|timedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12|timedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12|request@resource://services-common/kinto-http-client.sys.mjs:634:33|execute@resource://services-common/kinto-http-client.sys.mjs:2643:36|_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22|_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18|maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35|
+  - prototype Object
+console.error: services.settings: 
+Object
+  - prototype Object
+    - columnNumber = 0
+    - data = null
+    - filename = resource://gre/modules/ServiceRequest.sys.mjs
+    - lineNumber = 126
+    - location = {"name":"open","filename":"resource://gre/modules/ServiceRequest.sys.mjs","sourceId":25,"lineNumber":126,"columnNumber":11,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch/<","sourceId":24,"lineNumber":268,"columnNumber":15,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch","sourceId":24,"lineNumber":219,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"timedFetch/<","sourceId":642,"lineNumber":569,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"timedFetch","sourceId":642,"lineNumber":544,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"request","sourceId":642,"lineNumber":634,"columnNumber":33,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"execute","sourceId":642,"lineNumber":2643,"columnNumber":36,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"_fetchChangeset","sourceId":22,"lineNumber":1212,"columnNumber":22,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"_importChanges","sourceId":22,"lineNumber":1074,"columnNumber":18,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"maybeSync","sourceId":22,"lineNumber":763,"columnNumber":35,"asyncCause":null,"asyncCaller":null,"caller":null,"formattedStack":"maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"execute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"request@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"timedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"timedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"fetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"fetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"open@resource://gre/modules/ServiceRequest.sys.mjs:126:11\nfetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}}
+    - message = 
+    - name = 
+    - result = 2152071198
+    - stack = open@resource://gre/modules/ServiceRequest.sys.mjs:126:11|fetch/<@resource://services-settings/Utils.sys.mjs:268:15|fetch@resource://services-settings/Utils.sys.mjs:219:12|timedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12|timedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12|request@resource://services-common/kinto-http-client.sys.mjs:634:33|execute@resource://services-common/kinto-http-client.sys.mjs:2643:36|_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22|_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18|maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35|
+  - prototype Object
+1745487302259	geckodriver	INFO	Listening on 127.0.0.1:51438
+1745487356341	geckodriver	INFO	Listening on 127.0.0.1:51444
+1745487359392	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 45" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileMT2L9d"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745487359620	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745487359706	Marionette	INFO	Listening on port 51452
+WebDriver BiDi listening on ws://127.0.0.1:51445
+Read port: 51452
+1745487359819	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745487366215	Marionette	INFO	Stopped listening on port 51452
+Dynamically enable window occlusion 1
+1745487372935	geckodriver	INFO	Listening on 127.0.0.1:51475
+1745487375982	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 76" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile7w0Tkj"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745487376214	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745487376305	Marionette	INFO	Listening on port 51485
+WebDriver BiDi listening on ws://127.0.0.1:51476
+Read port: 51485
+1745487376440	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745487382918	Marionette	INFO	Stopped listening on port 51485
+Dynamically enable window occlusion 1
+1745487385709	geckodriver	INFO	Listening on 127.0.0.1:51508
+1745487388775	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 09" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile1b9p1W"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745487389012	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745487389130	Marionette	INFO	Listening on port 51516
+WebDriver BiDi listening on ws://127.0.0.1:51509
+Read port: 51516
+1745487389266	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745487395683	Marionette	INFO	Stopped listening on port 51516
+Dynamically enable window occlusion 1
+1745487398415	geckodriver	INFO	Listening on 127.0.0.1:51539
+1745487401468	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 40" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileX6MVdV"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745487401723	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745487401842	Marionette	INFO	Listening on port 51547
+WebDriver BiDi listening on ws://127.0.0.1:51540
+Read port: 51547
+1745487401957	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745487408353	Marionette	INFO	Stopped listening on port 51547
+Dynamically enable window occlusion 1
+1745487429509	geckodriver	INFO	Listening on 127.0.0.1:51577
+1745487432582	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 78" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile58TcCY"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745487432812	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745487432898	Marionette	INFO	Listening on port 51587
+WebDriver BiDi listening on ws://127.0.0.1:51578
+Read port: 51587
+1745487433013	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745487439474	Marionette	INFO	Stopped listening on port 51587
+Dynamically enable window occlusion 1
+1745487442205	geckodriver	INFO	Listening on 127.0.0.1:51610
+1745487460450	geckodriver	INFO	Listening on 127.0.0.1:51616
+1745487463498	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 17" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilenJvS7R"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745487463730	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745487463815	Marionette	INFO	Listening on port 51625
+WebDriver BiDi listening on ws://127.0.0.1:51617
+Read port: 51625
+1745487463932	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745487470388	Marionette	INFO	Stopped listening on port 51625
+Dynamically enable window occlusion 1
+1745487533882	geckodriver	INFO	Listening on 127.0.0.1:51651
+1745487536954	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 52" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileMtun7d"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745487537185	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745487537286	Marionette	INFO	Listening on port 51660
+WebDriver BiDi listening on ws://127.0.0.1:51652
+Read port: 51660
+1745487537411	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745487544039	Marionette	INFO	Stopped listening on port 51660
+Dynamically enable window occlusion 1
+1745487546781	geckodriver	INFO	Listening on 127.0.0.1:51683
+1745487553861	geckodriver	INFO	Listening on 127.0.0.1:51689
+1745487556913	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 90" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileCKN9Sm"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745487557158	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745487557297	Marionette	INFO	Listening on port 51697
+WebDriver BiDi listening on ws://127.0.0.1:51690
+Read port: 51697
+1745487557404	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745487563805	Marionette	INFO	Stopped listening on port 51697
+Dynamically enable window occlusion 1
+1745494807557	geckodriver	INFO	Listening on 127.0.0.1:52358
+1745494810613	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 59" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilelGhQRo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745494810845	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745494810933	Marionette	INFO	Listening on port 52366
+WebDriver BiDi listening on ws://127.0.0.1:52359
+Read port: 52366
+1745494811047	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745494822416	Marionette	INFO	Stopped listening on port 52366
+Dynamically enable window occlusion 1
+1745494825173	geckodriver	INFO	Listening on 127.0.0.1:52392
+1745494828255	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 93" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile8dpANS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745494828488	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745494828574	Marionette	INFO	Listening on port 52401
+WebDriver BiDi listening on ws://127.0.0.1:52393
+Read port: 52401
+1745494828690	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1745494850275	Marionette	INFO	Stopped listening on port 52401
+Dynamically enable window occlusion 1
+1745495161998	geckodriver	INFO	Listening on 127.0.0.1:52474
+1745495165048	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 75" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilexLqsLZ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745495165294	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745495165383	Marionette	INFO	Listening on port 52482
+WebDriver BiDi listening on ws://127.0.0.1:52475
+Read port: 52482
+1745495165503	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745495176825	Marionette	INFO	Stopped listening on port 52482
+Dynamically enable window occlusion 1
+1745495179589	geckodriver	INFO	Listening on 127.0.0.1:52508
+1745495182654	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 09" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileHai4oJ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745495182942	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745495183028	Marionette	INFO	Listening on port 52517
+WebDriver BiDi listening on ws://127.0.0.1:52509
+Read port: 52517
+1745495183141	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745495191697	Marionette	INFO	Stopped listening on port 52517
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/modules/Prompter.sys.mjs, line 1235: NS_ERROR_NOT_AVAILABLE: prompt aborted by user
+1745495439040	geckodriver	INFO	Listening on 127.0.0.1:52566
+1745495442115	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 67" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile2z4IOm"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745495442345	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745495442431	Marionette	INFO	Listening on port 52574
+WebDriver BiDi listening on ws://127.0.0.1:52567
+Read port: 52574
+1745495442547	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745495453889	Marionette	INFO	Stopped listening on port 52574
+Dynamically enable window occlusion 1
+1745495456653	geckodriver	INFO	Listening on 127.0.0.1:52598
+1745495459713	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 99" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilebXSDTm"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745495459946	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745495460034	Marionette	INFO	Listening on port 52607
+WebDriver BiDi listening on ws://127.0.0.1:52599
+Read port: 52607
+1745495460150	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745495468769	Marionette	INFO	Stopped listening on port 52607
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/modules/Prompter.sys.mjs, line 1235: NS_ERROR_NOT_AVAILABLE: prompt aborted by user
+1745495494897	geckodriver	INFO	Listening on 127.0.0.1:52635
+1745495497958	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 36" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile9dvl8b"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745495498189	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745495498275	Marionette	INFO	Listening on port 52643
+WebDriver BiDi listening on ws://127.0.0.1:52636
+Read port: 52643
+1745495498390	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745495509720	Marionette	INFO	Stopped listening on port 52643
+Dynamically enable window occlusion 1
+1745495512481	geckodriver	INFO	Listening on 127.0.0.1:52667
+1745495515555	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 68" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileADKtL9"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745495515786	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745495515872	Marionette	INFO	Listening on port 52676
+WebDriver BiDi listening on ws://127.0.0.1:52668
+Read port: 52676
+1745495515985	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745495524634	Marionette	INFO	Stopped listening on port 52676
+Dynamically enable window occlusion 1
+1745495558830	geckodriver	INFO	Listening on 127.0.0.1:52704
+1745495561912	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 05" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofileASqLyr"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745495562147	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745495562232	Marionette	INFO	Listening on port 52712
+WebDriver BiDi listening on ws://127.0.0.1:52705
+Read port: 52712
+1745495562347	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745495573755	Marionette	INFO	Stopped listening on port 52712
+Dynamically enable window occlusion 1
+1745495576518	geckodriver	INFO	Listening on 127.0.0.1:52736
+1745495579595	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 37" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile5HlXkL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745495579825	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745495579913	Marionette	INFO	Listening on port 52745
+WebDriver BiDi listening on ws://127.0.0.1:52737
+Read port: 52745
+1745495580029	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745495588665	Marionette	INFO	Stopped listening on port 52745
+Dynamically enable window occlusion 1
+1745495672329	geckodriver	INFO	Listening on 127.0.0.1:52816
+1745495675391	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 17" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofile35KQeK"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745495675619	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745495675707	Marionette	INFO	Listening on port 52824
+WebDriver BiDi listening on ws://127.0.0.1:52817
+Read port: 52824
+1745495675822	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745495687186	Marionette	INFO	Stopped listening on port 52824
+Dynamically enable window occlusion 1
+1745496157793	geckodriver	INFO	Listening on 127.0.0.1:52905
+1745496160874	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 06" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilezSXsYt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745496161151	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745496161258	Marionette	INFO	Listening on port 52913
+WebDriver BiDi listening on ws://127.0.0.1:52906
+Read port: 52913
+1745496161398	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745496172680	Marionette	INFO	Stopped listening on port 52913
+Dynamically enable window occlusion 1
+1745496175422	geckodriver	INFO	Listening on 127.0.0.1:52936
+1745496178471	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "window-size= ... 37" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\user\\AppData\\Local\\Temp\\rust_mozprofilekrJNcm"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745496178725	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1745496178812	Marionette	INFO	Listening on port 52944
+WebDriver BiDi listening on ws://127.0.0.1:52937
+Read port: 52944
+1745496178931	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4444."
+1745496194203	Marionette	INFO	Stopped listening on port 52944
+Dynamically enable window occlusion 1
