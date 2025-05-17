@@ -1,0 +1,13 @@
+<div class="form-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div class="form-title">Вход в аккаунт</div>
+        <input placeholder="Введите логин" id="login" formControlName="login" required />
+
+        <input placeholder="Введите пароль" id="password" formControlName="password" type="password" required />
+
+        <div class="inline-inside">
+            <button type="submit" [disabled]="loginForm.invalid">Войти</button>
+            <button (click)="redirectToRegisterForm()">Нет аккаунта</button>
+        </div>
+    </form>
+</div>

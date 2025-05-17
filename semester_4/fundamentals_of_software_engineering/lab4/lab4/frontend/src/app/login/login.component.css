@@ -1,0 +1,40 @@
+.form-container {
+    width: fit-content;
+    margin: auto;
+    margin-top: 25vh;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.form-container > form {
+    margin: 30px 0px !important;
+}
+
+.form-container > form > * {
+    display: block;
+    width: fit-content;
+    margin: 5px auto;
+}
+
+.form-container > form > input, .form-container button {
+    display: block;
+    height: 35px;
+    margin: 13px 20px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.form-container > form > input {
+    text-indent: 10px;
+    width: 280px;
+}
+
+.form-container > form button {
+    margin: auto 5px;
+    width: 135px;
+}
+
+.inline-inside > * {
+    display: inline-block !important;
+}
